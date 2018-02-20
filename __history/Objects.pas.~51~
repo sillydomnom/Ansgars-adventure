@@ -1,0 +1,178 @@
+unit Objects;
+
+interface
+uses Classes, SysUtils, StrUtils;
+type
+  Tplayer = class
+     private
+      gold, armor, health, strength : integer;
+      items: TStringList;
+      public
+      constructor create(gold, armor, health, strength : integer);
+      destructor free();
+      procedure addItem(item: String);
+      //getters
+      function getGold() : integer;
+      function getArmor() : integer;
+      function getHealth() : integer;
+      function checkForItem(item : String) : boolean;
+      //setters
+      procedure setEffect(effect : String);
+  end;
+  selection = class
+    private
+      state : integer;
+      text, URL, effect, condition : String;
+      subs : tstringlist;
+      public
+      constructor create(line : String);
+      destructor free();
+      //getters
+      function checkForCondition(player : Tplayer) : boolean;
+      function getState() : integer;
+      function getText() : String;
+      function getURL() : String;
+      function getEffect : String;
+    end;
+
+implementation
+
+uses Unit1;
+
+constructor Tplayer.create(gold, armor, health, strength : integer);
+begin
+   self.gold := gold;
+   self.armor := armor;
+   self.health := health;
+   self.strength := strength;
+end;
+
+destructor Tplayer.free();
+Begin
+  items.free;
+End;
+
+procedure Tplayer.addItem(item: string);
+begin
+  self.items.Add(item);
+end;
+
+function Tplayer.checkForItem(item : String) : boolean;
+var i : integer;
+Begin
+ result:= false;
+ for i := 0 to self.items.Count -1 do
+ Begin
+    if item = self.items[i] then
+      Begin
+      result := true;
+      break;
+      End
+    else if self.items.Count -1 = i  then
+      result:= false;
+
+ End;
+
+End;
+
+function Tplayer.getGold() : integer;
+begin
+  result := self.gold;
+end;
+
+function Tplayer.getArmor;
+begin
+  result := self.armor;
+end;
+
+function Tplayer.getHealth;
+begin
+  result := self.health;
+end;
+
+//setters
+procedure Tplayer.setEffect(effect : String);
+Begin
+
+End;
+
+//selection
+constructor selection.create(line: string);
+begin
+  self.state := 1;
+  self.subs.create;
+  Unit1.Form1.split('|',line,self.subs);
+  self.state := strtoint(self.subs[0]);
+  self.text := self.subs[1];
+  self.URL := self.subs[2];
+  case state of
+    1: self.condition := self.subs[3];
+    2: self.effect := self.subs[3];
+    3:Begin
+    self.condition := self.subs[3];
+    self.effect := self.subs[4];
+    End;
+  end;
+end;
+
+//getters
+function selection.checkForCondition(player: Tplayer) : boolean;
+var subs : Tstringlist;
+  con : integer;
+  abfrage : String;
+begin
+  if (self.state = 1) or (self.state = 3) then
+    Begin
+      result := false;
+      Form1.split(':',self.condition, subs);
+      con := strtoint(subs[1]);
+      abfrage := subs[0];
+      //Abfrage für die spez. Befehle
+      case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength']) of
+      0:
+        if player.gold > con then
+          result := true
+        else result := false;
+      1:
+        if player.armor > con then
+           result := true
+        else result := false;
+      2:
+        if player.health > con then
+          result := true
+        else
+          result := false;
+      3:
+        if player.strength > con then
+          result := true
+        else result := false;
+      end;
+    End;
+end;
+
+function selection.getState;
+begin
+  result := self.state;
+end;
+
+function selection.getText;
+begin
+  result := self.text;
+end;
+
+function selection.getURL;
+begin
+  result := self.URL;
+end;
+
+function selection.getEffect;
+begin
+  result := self.effect;
+end;
+
+destructor selection.free;
+Begin
+  self.subs.free;
+End;
+
+end.

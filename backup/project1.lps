@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="5">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="29" Y="10"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Objects.pas"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Unit1.pas"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="Unit3.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="22" Y="7"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="Unit2.pas"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit4>
+    </Units>
+    <JumpHistory Count="2" HistoryIndex="1">
+      <Position1>
+        <Filename Value="Unit3.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="10" Column="29"/>
+      </Position2>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

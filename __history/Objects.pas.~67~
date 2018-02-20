@@ -1,7 +1,7 @@
 unit Objects;
 
 interface
-uses Classes, SysUtils, StrUtils, Unit1;
+uses Classes, SysUtils, StrUtils;
 type
   Tplayer = class
      private
@@ -28,7 +28,7 @@ type
       constructor create(line : String);
       destructor free();
       //getters
-      function checkForCondition(player : Tplayer) : boolean;
+      function checkForCondition(player : Tplayer) : String;
       function getState() : integer;
       function getText() : String;
       function getURL() : String;
@@ -166,7 +166,7 @@ begin
 end;
 
 //getters
-function selec.checkForCondition(player: Tplayer) : boolean;
+function selec.checkForCondition(player: Tplayer) : String;
 var subs : Tstringlist;
   con : integer;
   abfrage : String;
@@ -175,27 +175,36 @@ begin
     Begin
       result := false;
       Form1.split(':',self.condition, subs);
-      con := strtoint(subs[1]);
+      con := (subs[1]);
       abfrage := subs[0];
       //Abfrage für die spez. Befehle
-      case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength']) of
+      //Wenn vorhanden dann result nil wenn nicht dann String
+      case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength', 'Item']) of
       0:
+        con := StrToInt(con)
         if player.gold > con then
-          result := true
-        else result := false;
+          result := nil;
+        else result := con + 'Gold';
       1:
+        con := StrToInt(con)
         if player.armor > con then
-           result := true
-        else result := false;
+           result := nil;
+        else result := con + 'Armor';
       2:
+        con := StrToInt(con)
         if player.health > con then
-          result := true
+          result := nil
         else
-          result := false;
+          result := con + 'HP';
       3:
+        con := StrToInt(con)
         if player.strength > con then
-          result := true
-        else result := false;
+          result := nil
+        else result := con + 'String';
+      4:
+        if player.checkForItem(con)
+          result := nil;
+        else result := 'Item' + con;
       end;
     End;
 end;

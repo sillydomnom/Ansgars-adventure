@@ -19,7 +19,7 @@ type
       //setters
       procedure setEffect(effect : String);
   end;
-  Tselection = class
+  selec = class
     private
       state : integer;
       text, URL, effect, condition : String;
@@ -92,12 +92,62 @@ end;
 
 //setters
 procedure Tplayer.setEffect(effect : String);
+var effects: tstringlist;
+    i : integer;
 Begin
-
+ Unit1.Form1.split(':',effect,effects);
+ case IndexStr(effects[0],['Gold', 'Armor', 'HP', 'Strength','Item']) of
+ 0:
+ Begin
+   i := strtoint(effects[1]);
+   self.gold := self.gold + i;
+   if i > 0 then
+      Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Gold erhalten!')
+   else
+      Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Gold verloren!');
+   Unit1.Form1.Memo1.Lines.Append('');
+ End;
+ 1:
+ Begin
+   i := strtoint(effects[1]);
+   self.armor := self.armor + i;
+   if i > 0 then
+      Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Rüstung bekommen!')
+   else
+      Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Rüstung verloren!');
+   Unit1.Form1.Memo1.Lines.Append('');
+ End;
+ 2:
+ Begin
+   i := strtoint(effects[1]);
+   self.health := self.health + i;
+   if i > 0 then
+      Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Leben regeneriert!')
+   else
+      Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Leben verloren!');
+   Unit1.Form1.Memo1.Lines.Append('');
+ End;
+ 3:
+ Begin
+   i := strtoint(effects[1]);
+   self.strength := self.strength + i;
+   if i > 0 then
+      Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Stärke erlangt!')
+   else
+      Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + 'Stärke verloren!');
+   Unit1.Form1.Memo1.Lines.Append('');
+ End;
+ 4:
+ Begin
+   self.addItem(effects[1]);
+   Unit1.Form1.Memo1.Lines.Append('Du hast ' + effects[1] + ' erhalten!');
+   Unit1.Form1.Memo1.Lines.Append('');
+ End;
+ end;
 End;
 
 //selection
-constructor Tselection.create(line: string);
+constructor selec.create(line: string);
 begin
   self.state := 1;
   self.subs := tstringlist.create;
@@ -116,7 +166,7 @@ begin
 end;
 
 //getters
-function Tselection.checkForCondition(player: Tplayer) : boolean;
+function selec.checkForCondition(player: Tplayer) : String;
 var subs : Tstringlist;
   con : integer;
   abfrage : String;
@@ -125,52 +175,60 @@ begin
     Begin
       result := false;
       Form1.split(':',self.condition, subs);
-      con := strtoint(subs[1]);
+      con := (subs[1]);
       abfrage := subs[0];
       //Abfrage für die spez. Befehle
-      case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength']) of
+      case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength', 'Item']) of
       0:
+        con := StrToInt(con)
         if player.gold > con then
-          result := true
-        else result := false;
+          result := nil;
+        else result := con + 'Gold';
       1:
+        con := StrToInt(con)
         if player.armor > con then
-           result := true
-        else result := false;
+           result := nil;
+        else result := con + 'Armor';
       2:
+        con := StrToInt(con)
         if player.health > con then
-          result := true
+          result := nil
         else
-          result := false;
+          result := con + 'HP';
       3:
+        con := StrToInt(con)
         if player.strength > con then
-          result := true
-        else result := false;
+          result := nil
+        else result := con + 'String';
+      4:
+        if player.checkForItem(con)
+          result := nil;
+        else result := 'Item' + con;
       end;
     End;
 end;
 
-function Tselection.getState;
+function selec.getState;
 begin
   result := self.state;
 end;
 
-function Tselection.getText;
+function selec.getText;
 begin
   result := self.text;
 end;
 
-function Tselection.getURL;
+function selec.getURL;
 begin
   result := self.URL;
 end;
 
-function Tselection.getEffect;
+function selec.getEffect;
 begin
   result := self.effect;
 end;
 
-destructor Tselection.free;
+destructor selec.free;
 Begin
   self.subs.free;
 End;

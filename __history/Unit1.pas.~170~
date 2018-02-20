@@ -31,10 +31,12 @@ type
   public
     { Public-Deklarationen }
       procedure split(Del : Char; Str: String; list : tstringlist);
+      function checkCondition() : Boolean;
       function getText(filename: String): tstringlist;
-      procedure waitForInput();
       procedure closeAll();
-      procedure StoryAblauf(player: TPlayer);
+      procedure StoryAblauf();
+      procedure StoryContinue();
+      procedure StoryEnd();
   end;
   var
   Form1: TForm1;
@@ -65,25 +67,18 @@ Begin
   Form1.Close;
 End;
 
-procedure TForm1.waitForInput;
+function TForm1.checkCondition() : Boolean;
+var con : string;
 begin
- Pause := true;
-  ButtonSelec := 0;
-  while Pause do
-  Begin
-    sleep(100);
-    Application.ProcessMessages;
-  End;
-  if not(selecs[ButtonSelec - 1].checkForCondition(player)) then
+  con := selecs[ButtonSelec - 1].checkForCondition(player);
+  if  not(con = '') then
   Begin
     Memo1.Lines.Append('Du hast nicht die Vorraussetzungen um das auszuführen ! Wähle was anderes!');
-    waitForInput();
-  End;
-
-
-
-
-
+    Memo1.Lines.Append('');
+    Memo1.Lines.Append('Du brauchst' + con );
+  End
+  else
+    StoryContinue();
 end;
 
 function TForm1.getText(filename : String) : tstringlist;
@@ -108,19 +103,19 @@ End;
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   ButtonSelec := 1;
-  Pause := false;
+  checkCondition();
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   ButtonSelec := 2;
-  Pause := false;
+  checkCondition();
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
   ButtonSelec := 3;
-  Pause := false;
+  checkCondition();
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
@@ -140,21 +135,19 @@ procedure TForm1.Button8Click(Sender: TObject);
 begin
   player := Tplayer.create(0, 0, 30, 10);
   data:= 'Part1.str';
-  StoryAblauf(player);
+  StoryAblauf();
 
 end;
 
-procedure TForm1.StoryAblauf(player: TPlayer);
+procedure TForm1.StoryAblauf();
 var subs: tstringlist;
-  sub, lauf : String;
+  lauf : String;
   j: Integer;
-  i: Integer;
 var l : Integer;
+  test1:Integer;
+  test2:Integer;
 Begin
- while true do
-  Begin
     subs := getText(data);
-    sub := subs[5];
     for j := 1 to strtoint(subs[0]) do
       Begin
        Memo1.Lines.Append(subs[j]);
@@ -168,7 +161,9 @@ Begin
   //Selections erstellen
   for l := 0 to strtoint(subs[strtoint(subs[0])+1])-1 do
   Begin
-    lauf:= subs[strtoint(subs[strtoint(subs[0])+1]) + strtoint(subs[0])+ l];
+    test1:= strtoint(subs[strtoint(subs[0])+1]);
+    test2 := strtoint(subs[0])+ l;
+    lauf:= subs[test1 + test2];
     selecs[l] := selec.create(lauf);
   End;
 
@@ -196,38 +191,44 @@ Begin
       End;
     end;
   //Alle Auswahlen durchgehen
-
+  subs.free;
   //Auf Button warten
-  waitForInput();
+
+End;
+
+procedure TForm1.StoryContinue;
+var URL : String;
+  i : Integer;
+begin
   if (selecs[ButtonSelec -1].getState = 2) or (selecs[ButtonSelec -1].getState = 3) THEN
     player.setEffect(selecs[ButtonSelec -1].getEffect);
   //wenn die nächste URL leer ist dann aufhören
-  if selecs[ButtonSelec - 1].getURL = '' then
+  URL := selecs[ButtonSelec - 1].getURL;
+  if  URL <> '' then
   Begin
    //nächste Datei einlesen
    dir := ExtractFileDir('Part1.str');
    data := dir + selecs[ButtonSelec -1].getURL;
-   continue;
+   for i := 0 to 2 do
+    selecs[i].free;
+    selecs[i] := nil;
+   StoryAblauf();
   End
   else
-  Begin
+    StoryEnd();
+end;
 
-    break;
-  End;
+procedure TForm1.StoryEnd;
+var i : integer;
+begin
+  Memo1.Lines.Append('Danke fürs spielen!');
 
-  break;
+  //reset
+  player.free;
+  for i := 0 to 2 do
+    selecs[i].free;
 
-  End;
-//Ende while
-//reset
-player.free;
-for i := 0 to 2 do
-  selecs[l].free;
 
-subs.free;
-CloseFile(myStory);
-
-End;
-
+end;
 
 end.

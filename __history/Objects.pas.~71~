@@ -1,7 +1,7 @@
 unit Objects;
 
 interface
-uses Classes, SysUtils, StrUtils, Unit1;
+uses Classes, SysUtils, StrUtils;
 type
   Tplayer = class
      private
@@ -28,7 +28,7 @@ type
       constructor create(line : String);
       destructor free();
       //getters
-      function checkForCondition(player : Tplayer) : boolean;
+      function checkForCondition(player : Tplayer) : String;
       function getState() : integer;
       function getText() : String;
       function getURL() : String;
@@ -37,6 +37,7 @@ type
 
 implementation
 
+uses Unit1;
 
 constructor Tplayer.create(gold, armor, health, strength : integer);
 begin
@@ -165,36 +166,46 @@ begin
 end;
 
 //getters
-function selec.checkForCondition(player: Tplayer) : boolean;
+function selec.checkForCondition(player: Tplayer) : String;
 var subs : Tstringlist;
-  con : integer;
+  con : String;
+  con2: Integer;
   abfrage : String;
 begin
   if (self.state = 1) or (self.state = 3) then
     Begin
-      result := false;
+      result := '';
       Form1.split(':',self.condition, subs);
-      con := strtoint(subs[1]);
+      con := (subs[1]);
       abfrage := subs[0];
       //Abfrage für die spez. Befehle
-      case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength']) of
+      //Wenn vorhanden dann result '' wenn nicht dann String
+      case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength', 'Item']) of
       0:
-        if player.gold > con then
-          result := true
-        else result := false;
+        con2 := StrToInt(con)
+        if player.gold > con2 then
+          result := '';
+        else result := con + 'Gold';
       1:
-        if player.armor > con then
-           result := true
-        else result := false;
+        con2 := StrToInt(con)
+        if player.armor > con2 then
+           result := '';
+        else result := con + 'Armor';
       2:
-        if player.health > con then
-          result := true
+        con2 := StrToInt(con)
+        if player.health > con2 then
+          result := '';
         else
-          result := false;
+          result := con + 'HP';
       3:
-        if player.strength > con then
-          result := true
-        else result := false;
+        con2 := StrToInt(con)
+        if player.strength > con2 then
+          result := '';
+        else result := con + 'String';
+      4:
+        if player.checkForItem(con)
+          result := '';
+        else result := 'Item' + con;
       end;
     End;
 end;

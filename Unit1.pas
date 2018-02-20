@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls,Unit2;
+  Dialogs, StdCtrls,Objects;
 
 type
   TForm1 = class(TForm)
@@ -16,38 +16,41 @@ type
     Button5: TButton;
     Button6: TButton;
     Button7: TButton;
+    Button8: TButton;
     procedure Button5Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
 
   private
     { Private-Deklarationen }
 
+
   public
     { Public-Deklarationen }
-      procedure StoryAblauf(Sender: TObject);
       procedure split(Del : Char; Str: String; list : tstringlist);
       function getText(filename: String): tstringlist;
       procedure waitForInput();
       procedure closeAll();
+      procedure StoryAblauf(player: TPlayer);
   end;
   var
   Form1: TForm1;
 
-
-  implementation
-  uses Unit3, Objects;
+implementation
+  uses Unit3, Unit2;
 
   var
 
   myStory: TextFile;
   ButtonSelec : integer;
   Pause : boolean;
-  selecs : Array[0..2] of selec;
+  selecs : Array[0..3] of selec;
   player: Tplayer;
+  data : String;
+  dir : String;
 
 
 
@@ -133,23 +136,22 @@ begin
   Form2.Show;
 end;
 
-procedure TForm1.StoryAblauf(Sender: TObject);
-
+procedure TForm1.Button8Click(Sender: TObject);
 begin
+  player := Tplayer.create(0, 0, 30, 10);
+  data:= 'Part1.str';
+  StoryAblauf(player);
 
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TForm1.StoryAblauf(player: TPlayer);
 var subs: tstringlist;
   sub, lauf : String;
   j: Integer;
   i: Integer;
 var l : Integer;
-  data : String;
-begin
-  player := Tplayer.create(0, 0, 30, 10);
-  data:= 'Part1.str';
-  while true do
+Begin
+ while true do
   Begin
     subs := getText(data);
     sub := subs[5];
@@ -197,17 +199,20 @@ begin
 
   //Auf Button warten
   waitForInput();
-  player.setEffect(selecs[ButtonSelec -1].getEffect);
+  if (selecs[ButtonSelec -1].getState = 2) or (selecs[ButtonSelec -1].getState = 3) THEN
+    player.setEffect(selecs[ButtonSelec -1].getEffect);
   //wenn die nächste URL leer ist dann aufhören
   if selecs[ButtonSelec - 1].getURL = '' then
   Begin
-   break;
+   //nächste Datei einlesen
+   dir := ExtractFileDir('Part1.str');
+   data := dir + selecs[ButtonSelec -1].getURL;
+   continue;
   End
   else
   Begin
-    //nächste Datei einlesen
-    data := selecs[ButtonSelec -1].getURL;
-    continue;
+
+    break;
   End;
 
   break;
@@ -222,7 +227,7 @@ for i := 0 to 2 do
 subs.free;
 CloseFile(myStory);
 
-end;
+End;
 
 
 end.

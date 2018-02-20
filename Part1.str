@@ -2,7 +2,7 @@
 Hallo und Willkommen im Dungeon! 
 Dies ist ein Test!
 Tschuess!
-2
-0|Den Wirt nach Infos fragen!|\\files\\Part2.str
-1|Die Dame bezahlen.|\\files\\Part3.str|Gold:30
-3|Kaempfen!|\\files\\Part5.str|Item:Schwert der Macht|HP:-10
+3
+0|Den Wirt nach Infos fragen!|\Story\Part2.str
+1|Die Dame bezahlen.|\Story\Part3.str|Gold:30
+3|Kaempfen!|\Story\Part5.str|Item:Schwert der Macht|HP:-10

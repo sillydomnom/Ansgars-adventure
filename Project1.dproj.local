@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\s2096\Documents\RAD Studio\Projekte\Unit2.pas=H:\Informatik\Projekt\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\s2096\Documents\RAD Studio\Projekte\Unit2.dfm=H:\Informatik\Projekt\Unit2.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.pas,T:\Schulweiter Tausch\Info Projekt Zork Delphi\Projekt\Unit4.pas=T:\Schulweiter Tausch\Info Projekt Zork Delphi\Projekt\Objects.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\s2096\Documents\RAD Studio\Projekte\Unit1.dfm=H:\Informatik\Projekt\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\s2096\Documents\RAD Studio\Projekte\Unit1.pas=H:\Informatik\Projekt\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.dproj,C:\Users\s2096\Documents\RAD Studio\Projekte\Project1.dproj=H:\Informatik\Projekt\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,H:\Informatik\Projekt\Unit1.dfm=C:\Users\s2096\Documents\RAD Studio\Projekte\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,H:\Informatik\Projekt\Unit2.pas=C:\Users\s2096\Documents\RAD Studio\Projekte\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,H:\Informatik\Projekt\Unit2.dfm=C:\Users\s2096\Documents\RAD Studio\Projekte\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,H:\Informatik\Projekt\Unit1.pas=C:\Users\s2096\Documents\RAD Studio\Projekte\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dproj,H:\Informatik\Projekt\Project1.dproj=C:\Users\s2096\Documents\RAD Studio\Projekte\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,T:\Schulweiter Tausch\Info Projekt Zork Delphi\Projekt\Objects.pas=T:\Schulweiter Tausch\Info Projekt Zork Delphi\Projekt\Unit4.pas</Transaction>
   </Transactions>
 </BorlandProject>

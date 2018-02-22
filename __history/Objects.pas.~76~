@@ -168,45 +168,53 @@ end;
 //getters
 function selec.checkForCondition(player: Tplayer) : String;
 var subs : Tstringlist;
-  con : integer;
+  con : String;
+  con2: Integer;
   abfrage : String;
 begin
+  subs := Tstringlist.Create;
   if (self.state = 1) or (self.state = 3) then
     Begin
-      result := false;
+      result := '';
       Form1.split(':',self.condition, subs);
       con := (subs[1]);
       abfrage := subs[0];
       //Abfrage für die spez. Befehle
       //Wenn vorhanden dann result '' wenn nicht dann String
       case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength', 'Item']) of
-      0:
-        con := StrToInt(con)
-        if player.gold > con then
-          result := '';
+      0:Begin
+        con2 := StrToInt(con);
+        if player.gold > con2 then
+          result := ''
         else result := con + 'Gold';
-      1:
-        con := StrToInt(con)
-        if player.armor > con then
-           result := '';
+      End;
+      1:Begin
+        con2 := StrToInt(con);
+        if player.armor > con2 then
+           result := ''
         else result := con + 'Armor';
-      2:
-        con := StrToInt(con)
-        if player.health > con then
-          result := '';
+      End;
+      2:Begin
+        con2 := StrToInt(con);
+        if player.health > con2 then
+          result := ''
         else
           result := con + 'HP';
-      3:
-        con := StrToInt(con)
-        if player.strength > con then
-          result := '';
+      End;
+      3:Begin
+        con2 := StrToInt(con);
+        if player.strength > con2 then
+          result := ''
         else result := con + 'String';
-      4:
-        if player.checkForItem(con)
-          result := '';
+      End;
+      4:Begin
+        if player.checkForItem(con) then
+          result := ''
         else result := 'Item' + con;
+      End;
       end;
     End;
+    subs.Free;
 end;
 
 function selec.getState;

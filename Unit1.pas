@@ -75,7 +75,7 @@ begin
   Begin
     Memo1.Lines.Append('Du hast nicht die Vorraussetzungen um das auszuführen ! Wähle was anderes!');
     Memo1.Lines.Append('');
-    Memo1.Lines.Append('Du brauchst' + con );
+    Memo1.Lines.Append('Du brauchst ' + con );
   End
   else
     StoryContinue();
@@ -162,8 +162,8 @@ Begin
   for l := 0 to strtoint(subs[strtoint(subs[0])+1])-1 do
   Begin
     test1:= strtoint(subs[strtoint(subs[0])+1]);
-    test2 := strtoint(subs[0])+ l + i;
-    lauf:= subs[test1 + test2];
+    test2 := strtoint(subs[0])+ 2 + i;
+    lauf:= subs[test2];
     if lauf <> '' then
       selecs[l] := selec.create(lauf)
     else

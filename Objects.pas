@@ -41,6 +41,7 @@ uses Unit1;
 
 constructor Tplayer.create(gold, armor, health, strength : integer);
 begin
+   self.items := Tstringlist.Create;
    self.gold := gold;
    self.armor := armor;
    self.health := health;
@@ -61,8 +62,10 @@ function Tplayer.checkForItem(item : String) : boolean;
 var i : integer;
 Begin
  result:= false;
- for i := 0 to self.items.Count -1 do
+ if self.items.Count <> 0 then
  Begin
+  for i := 0 to self.items.Count -1 do
+    Begin
     if item = self.items[i] then
       Begin
       result := true;
@@ -71,6 +74,7 @@ Begin
     else if self.items.Count -1 = i  then
       result:= false;
 
+    End;
  End;
 
 End;
@@ -172,6 +176,7 @@ var subs : Tstringlist;
   con2: Integer;
   abfrage : String;
 begin
+  subs := Tstringlist.Create;
   if (self.state = 1) or (self.state = 3) then
     Begin
       result := '';
@@ -185,34 +190,35 @@ begin
         con2 := StrToInt(con);
         if player.gold > con2 then
           result := ''
-        else result := con + 'Gold';
+        else result := con + ' Gold';
       End;
       1:Begin
         con2 := StrToInt(con);
         if player.armor > con2 then
            result := ''
-        else result := con + 'Armor';
+        else result := con + ' Armor';
       End;
       2:Begin
         con2 := StrToInt(con);
         if player.health > con2 then
           result := ''
         else
-          result := con + 'HP';
+          result := con + ' HP';
       End;
       3:Begin
         con2 := StrToInt(con);
         if player.strength > con2 then
           result := ''
-        else result := con + 'String';
+        else result := con + ' Strength';
       End;
       4:Begin
         if player.checkForItem(con) then
           result := ''
-        else result := 'Item' + con;
+        else result := 'Item ' + con;
       End;
       end;
     End;
+    subs.Free;
 end;
 
 function selec.getState;

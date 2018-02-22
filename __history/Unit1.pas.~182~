@@ -75,7 +75,7 @@ begin
   Begin
     Memo1.Lines.Append('Du hast nicht die Vorraussetzungen um das auszuführen ! Wähle was anderes!');
     Memo1.Lines.Append('');
-    Memo1.Lines.Append('Du brauchst' + con );
+    Memo1.Lines.Append('Du brauchst ' + con );
   End
   else
     StoryContinue();
@@ -134,7 +134,7 @@ end;
 procedure TForm1.Button8Click(Sender: TObject);
 begin
   player := Tplayer.create(0, 0, 30, 10);
-  data:= 'Part1.str';
+  data:= GetCurrentDir() + '\Story\Part1.str';
   StoryAblauf();
 
 end;
@@ -143,7 +143,7 @@ procedure TForm1.StoryAblauf();
 var subs: tstringlist;
   lauf : String;
   j: Integer;
-var l : Integer;
+var l , i : Integer;
   test1:Integer;
   test2:Integer;
 Begin
@@ -157,14 +157,17 @@ Begin
     //Begin
 
     //End;
-
+  i := 0;
   //Selections erstellen
   for l := 0 to strtoint(subs[strtoint(subs[0])+1])-1 do
   Begin
     test1:= strtoint(subs[strtoint(subs[0])+1]);
-    test2 := strtoint(subs[0])+ l;
-    lauf:= subs[test1 + test2];
-    selecs[l] := selec.create(lauf);
+    test2 := strtoint(subs[0])+ 2 + i;
+    lauf:= subs[test2];
+    if lauf <> '' then
+      selecs[l] := selec.create(lauf)
+    else
+      i := i +1;
   End;
 
     case strtoint(subs[strtoint(subs[0])+1]) of
@@ -207,7 +210,7 @@ begin
   if  URL <> '' then
   Begin
    //nächste Datei einlesen
-   dir := ExtractFileDir(data)
+   dir := GetCurrentDir();
    data := dir + selecs[ButtonSelec -1].getURL;
    for i := 0 to 2 do
    Begin

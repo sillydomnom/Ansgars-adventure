@@ -162,7 +162,7 @@ Begin
   for l := 0 to strtoint(subs[strtoint(subs[0])+1])-1 do
   Begin
     test1:= strtoint(subs[strtoint(subs[0])+1]);
-    test2 := strtoint(subs[0])+ 2 + i;
+    test2 := strtoint(subs[0])+ 2 +l + i;
     lauf:= subs[test2];
     if lauf <> '' then
       selecs[l] := selec.create(lauf)

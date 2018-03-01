@@ -134,6 +134,8 @@ end;
 procedure TForm1.Button8Click(Sender: TObject);
 begin
   player := Tplayer.create(0, 0, 30, 10);
+  //player.addItem('Start Item');
+  Form3.onUpdate(player);
   data:= GetCurrentDir() + '\Story\Part1.str';
   StoryAblauf();
 

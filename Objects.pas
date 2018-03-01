@@ -15,6 +15,8 @@ type
       function getGold() : integer;
       function getArmor() : integer;
       function getHealth() : integer;
+      function getStrength() : integer;
+      function getItems() : tstringlist;
       function checkForItem(item : String) : boolean;
       //setters
       procedure setEffect(effect : String);
@@ -92,6 +94,16 @@ end;
 function Tplayer.getHealth;
 begin
   result := self.health;
+end;
+
+function Tplayer.getStrength;
+begin
+  result := self.strength;
+end;
+
+function Tplayer.getItems;
+begin
+  result:= self.items;
 end;
 
 //setters

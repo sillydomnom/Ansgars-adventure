@@ -4,5 +4,5 @@ Dies ist ein Test!
 Tschuess!
 3
 0|Den Wirt nach Infos fragen!|\Story\Part2.str
-1|Die Dame bezahlen.|\Story\Part3.str|Gold:30
+1|Die Dame bezahlen.|\Story\Part3.str|Gold:20
 3|Kaempfen!|\Story\Part5.str|Item:Schwert der Macht|HP:-10

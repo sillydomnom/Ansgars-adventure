@@ -43,6 +43,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    Visible = False
     WordWrap = True
     OnClick = Button1Click
   end
@@ -59,6 +60,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    Visible = False
     WordWrap = True
     OnClick = Button2Click
   end
@@ -75,6 +77,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    Visible = False
     WordWrap = True
     OnClick = Button3Click
   end

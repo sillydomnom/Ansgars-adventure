@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls,  ExtCtrls;
+  Dialogs, StdCtrls,  ExtCtrls, pngimage, Objects;
 
 type
   TForm3 = class(TForm)
@@ -21,6 +21,7 @@ type
     { Private-Deklarationen }
   public
     { Public-Deklarationen }
+    procedure onUpdate(player : Tplayer);
   end;
 
 var
@@ -28,6 +29,16 @@ var
 
 implementation
 
+uses Unit1;
+
 {$R *.dfm}
+
+procedure TForm3.onUpdate(player: Tplayer);
+begin
+  Label5.Caption := 'Gold: ' + player.getGold;
+  Label6.Caption := 'Leben: ' + player.getHealth + '/100';
+  Label7.Caption := 'Rüstung: ' + player.getArmor + '/100';
+  Label8.Caption := 'Stärke: ' + player.getStrength;
+end;
 
 end.

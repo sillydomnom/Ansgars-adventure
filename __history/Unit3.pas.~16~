@@ -52,9 +52,7 @@ begin
       else
         Label4.Caption := Label4.Caption + ', ' + items[i];
     End;
-  End
-  else
-    Label4.Caption := '';
+  End;
 
 end;
 

@@ -1,0 +1,10 @@
+5
+Du hast dich entschieden den alten Mann töten. Und seine Besitztümer an dich zu reißen. Alles was er dabei hat. 
+Doch die Frage ist, mit was willst du ihn töten?
+Willst du versuchen den alten Mann mit seinen eignen Gürtel zu erdrosseln?
+Willst du nach einen Ast oder anderen Gegenstand in deiner Nähe suchen und ihn damit erschlagen?
+Oder willst du ihn mit deinen eigenen Händen bekämpfen?
+3
+0|Erdrosseln|Story2'3Schnur.txt
+0|Mit einen Gegenstand erschlagen|Story2'3Gegenstand.txt
+0|Mit bloßen Händen überwältigen|Story2'3Hand.txt

@@ -1,0 +1,31 @@
+28
+Prolog......
+Die Welt befindet sich im Umbruch. Wir schreiben das Jahr 1012. Das Reich der Wikinger erstreckt sich über Dänemark, Norwegen, sowie Teile Schwedens, England und Irland.
+Ein Volk, welcher weit und breit gefürchtet wird. Selbst die Germanen und Franken, welche weit weg der großen Wassermassen leben, fürchten sich vor deinen Volk und den Überfällen.
+Und genau in diesen Land beginnt deine Geschichte, deine Reise voller Abenteuer, voller Entscheidungen, voller Leid und Trauer oder auch voller Erfolg und Glück.
+Allein du entscheidest, wie es ausgeht.
+Dein Dorf, welches im Norden des europäischen Kontinet befindet, genauer gesagt direkt an der Meerenge zwischen deinen Volk, den Nordmänner und den Volk der Germanen.
+Ein kleines ruhiges Dorf, welches sich durch Handel und Fischerei am Leben erhält. In letzter Zeit kamen immer mehr Nordmänner, aus dem Land des ewigen Eises(Lapland) zu uns gewandert.
+Da die Winter immer rauner werden und der Sommer so kurz wurde, dass man nichts mehr anbauen kann. Die Zeiten werden härter und mit den Zeiten auch der Winter.
+Immer weiter wagt sich der Winter gen Süden und verweilt auch dort länger, als der üblichen Jahreszeit entsprechend.
+Es kamen so viele Männer mit ihren Frauen und Kindern in euer Dorf, dass das Essen langsam knapp wurde. 
+Der Monarch des Königreiches, Knut des Großen, entschied, dass eine kleine Truppe von Männer, bestehend aus Männer deines Dorfes und Männer aus Lapland.
+Die Zielrichtung gen Westen, das Ziel Erkundung und Eroberung neuer Gebiete, um die Familien aus Lapland Essen und Land geben zu können.
+Du wurdest von Knut dem Großen höchst persönlich auserwählt, deine Gruppe besteht aus 20 Männer, zehn aus deinen Dorf und Dörfer aus der Umgebung und zehn Männer aus Lapland.
+Das Leben auf dem Schiff ist dir nicht fremd, denn du warst jede Woche draußen auf der See, um zu fischen. 
+Doch das Leben auf einen Fischerkutter ist schon ein anderes, als das Leben auf eines Kriegsschiff der Wikinger.
+Die Wellen und das Schwanken des Schiffes, inklusive des Bodens, machen dir sehr zu schaffen. Du erkrankst nur wenige Tage, nach Start deiner Reise. Dich plagen Übelkeit und Fieber.
+Du bewegst dich mehrere Tage nicht aus dem Bett, während dieser Zeit machten deine Kopanen einen Zwischenhalt in den englischen Besitztümer von Knut den Großen.
+Während dieses zwei wöchigen Aufenthalt behandelt dich ein Apotheker, durch die gute medizinische Behandlung, stehst du, pünktlich zur Weiterfahrt, wieder auf deinen Beinen.
+Doch bevor dein Schiff den Ärmelkanal durchquert hat, erscheint ein Gewitter gitantischer Ausmaße das Schiff. 
+Die Wellen spülen alles, was lose ist, vom Deck, selbst Männer wurden schon so in die Tiefe des Ozeans gezogen.
+Der Sturm nimmt nicht ab, er wird immer stärker und zerstörerischer. Die Mannschaft des Schiffes versucht alles, um das Schiff in den nächsten sicheren Hafen zu bringen.
+Doch ihr alle seit von den Göttern verlassen worden zu sein, selbst das Beten zu Thor, den Gott des Donners und der Schifffahrt und zum Göttervater bringt nichts. 
+Euer Tod ist besiegelt.
+Die Wellen verschlingen das Deck wie eine Riesenkrake und ziehen es in die Tiefe des Meeres. Selbst die stärksten unter der Crew, können sich nicht gegen die Kraft des Meeres behaupten.
+Jeder versucht sich zu retten, du klammerst dich um eine alte Holzplanke und treibst mutterseelenalleine über das Wasser.
+Dein kurzes Leben ist vorbei, soweit vom Land entfernt und ohne Schiff in der Nähe. 
+Nach mehreren Tagen erscheint am Horizont eine Lichtquelle, ein Schiff, hoffentlich das welches die Toten nach Walhalla, die Erlösung.
+Doch selbst dieser Wunsch bleibt dir verwährt, denn dies ist nicht das Ende deiner Leiden, sondern erst der Anfang vom allem....
+1
+0|Weiter|\Story\Prolog2.txt

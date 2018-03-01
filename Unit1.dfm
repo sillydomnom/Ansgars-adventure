@@ -28,6 +28,7 @@ object Form1: TForm1
       '')
     ParentFont = False
     ReadOnly = True
+    ScrollBars = ssVertical
     TabOrder = 0
   end
   object Button1: TButton

@@ -1,6 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  BorderIcons = [biMinimize]
   Caption = 'Form1'
   ClientHeight = 608
   ClientWidth = 910
@@ -11,7 +12,6 @@ object Form1: TForm1
   Font.Name = 'Courier'
   Font.Style = []
   OldCreateOrder = False
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 20
   object Memo1: TMemo
@@ -28,31 +28,59 @@ object Form1: TForm1
       '')
     ParentFont = False
     ReadOnly = True
+    ScrollBars = ssHorizontal
     TabOrder = 0
   end
   object Button1: TButton
     Left = 16
     Top = 504
     Width = 193
-    Height = 57
+    Height = 81
     Caption = 'Mgl1'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Courier'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
+    Visible = False
+    WordWrap = True
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 312
     Top = 504
     Width = 193
-    Height = 57
+    Height = 81
     Caption = 'Mgl2'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Courier'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
+    Visible = False
+    WordWrap = True
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 600
-    Top = 504
+    Top = 503
     Width = 193
-    Height = 57
+    Height = 82
     Caption = 'Mgl3'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Courier'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
+    Visible = False
+    WordWrap = True
+    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 799
@@ -87,5 +115,14 @@ object Form1: TForm1
     Height = 66
     Caption = 'Load'
     TabOrder = 7
+  end
+  object Button8: TButton
+    Left = 799
+    Top = 223
+    Width = 103
+    Height = 66
+    Caption = 'New'
+    TabOrder = 8
+    OnClick = Button8Click
   end
 end

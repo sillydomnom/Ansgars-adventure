@@ -1,0 +1,22 @@
+17
+Die Sonne kitzelt deine Nase. Du versucht deine Augen zu öffnen, doch die strahlende Sonne verweigert dir dieses Privileg.
+Du beschließt dich erst einmal aufzurichten, bevor du dir deine Umgebung nochmal genauer anschauen kannst.
+Doch als du versucht deinen Oberkörper in eine aufrechte Lage zu versetzten, spürst du wieder die Wellen des Schmerzes, welche wie ein Tsunami über deinen gesamten Leib wiederherfahren.
+Du bleibst liegen und lässt deine Augen geschlossen.
+Dir fällt während den Augenblicken der völligen Ruhe, welche nur durch das liebliche Singen der Vögel des Waldes gestört wird, eine besondere Atemtechnik ein, mit welcher man großen Schmerz überstehen kann.
+Du konzentrierst dich auf deine Atmung. Ein und Aus. Ein und Aus. Du merkst wie langsam der Schmerz nachlässt. Du versuchst noch einmal dich aufzurichten und diesmal klappt auch dein Vorhaben, dank der besonderen Atemtechnik.
+Als du dich aufgerichtet hattest, öffnest du deine Augen, obwohl die Sonne immer noch in deinen Augen, wie ein Stich eines glühenden Messer wirkt, gewöhnen sich langsam deine Augen wieder an das natürliche Tageslicht. 
+Du siehst vor dir die Waldlichtung, bloß diesmal nicht in dem roten Licht der Dämmerung gehüllt, sondern in den strahlenden Farben der Mittagssonne. Du beobachtest deine Umgebung ganz genau....
+Vor dir legen dir Trümmer der zerstörten Hütte, links von dir beginnt ein dichter Wald. Du fährst mit deinen Augen nochmal über die Unfallstelle und bemerkst, dass die toten Körper der Männer weg sind.
+Dein Herz fängt an zu rasen, du fragst dich was in der Zeit, in der du geschlafen hast, passiert ist. Waren die Männer gar nicht tot und sind von alleine gegangen oder hat sie jemand weggeschleppt.
+Du drehst deinen Kopf nach rechts, dein ganzer Körper schmerzt bei jeder Bewegung. Neben dir sitzt ein unbekannter Mann und schläft.
+Er ist ungefähr 50 Jahre alt und trägt eine abgetragene braune Kutte. Sein letzter Besuch beim Barbier war schon lange her, denn sein weißer Bart trägt ihn ungefähr eine bis zum Brustkorb.
+Um seine Hüfte rum ist eine Schnur gebunden, höchstwahrscheinlich aus Flachs oder Sial. An den Gürtel ist eine Wasserflasche befestigt. Auf dem Rücken trägt er einen ungefähr zwei Meter langen Stock. Vielleicht ein Wanderstock oder ähnliches.
+Was möchtest du machen? 
+Willst du dich langsam davon schleichen. Richtung des dichten Waldes?
+Willst du versuchen mit dem Mann zureden und ihn um Hilfe zu bitten?
+Oder willst du versuchen ihn zu überwältigen und seine Besitztümer an dich zu reißen?
+3
+2|Davon Schleichen|Story2'1.txt|HP:-5
+0|Mit dem Mann reden|Story2'2.txt
+0|Alten Mann überwältigen|Story2'3.txt

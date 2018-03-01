@@ -1,0 +1,11 @@
+8
+Er soll sterben un das jetzt. Es ist keine Zeit da, um sich irgendeine Waffe zu besorgen. Die Hände müssen ausreichen.
+Dein Adrelalinspiegel steigt ins unermäßliche, deine Schmerzen scheinen in diesen Moment vollkomen zu verschwinden.
+Du stehst auf und schleicht dich langsam an. Nun stehst du vor ihn.
+Er Mann tut dir irgendwie leid, so unehrenhaft zu sterben, im Schlaf. Doch heute ist sein Todestag und du bist der Vollstrecker.
+Du legst sanft deine Hände um den schrumpligen Hals des Alten. 
+Doch bevor du noch zudrücken kannst, schlägt er dir mit seiner Handkante, seitlich auf deinen Hals und mit einen anderen Schlag auf deine Schläfe.
+Es ging alles so schnelle, du konntest dich einfach nicht wehren.
+Die Schläge waren präsize und kraftvoll, zu kraftvoll du fällst nach hinten auf den Boden.
+1
+2|Weiter|Story3'1.txt|HP:-3

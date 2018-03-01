@@ -34,7 +34,7 @@ object Form1: TForm1
     Left = 16
     Top = 504
     Width = 193
-    Height = 57
+    Height = 81
     Caption = 'Mgl1'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -43,13 +43,14 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    WordWrap = True
     OnClick = Button1Click
   end
   object Button2: TButton
     Left = 312
     Top = 504
     Width = 193
-    Height = 57
+    Height = 81
     Caption = 'Mgl2'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -58,13 +59,14 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    WordWrap = True
     OnClick = Button2Click
   end
   object Button3: TButton
     Left = 600
     Top = 503
     Width = 193
-    Height = 57
+    Height = 82
     Caption = 'Mgl3'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -73,6 +75,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    WordWrap = True
     OnClick = Button3Click
   end
   object Button4: TButton

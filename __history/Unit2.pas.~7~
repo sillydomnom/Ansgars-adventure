@@ -38,7 +38,7 @@ end;
 
 procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  //Unit1.Form1.closeAll();
+  Unit1.Form1.closeAll();
 end;
 
 end.

@@ -24,8 +24,8 @@ type
   selec = class
     private
       state : integer;
-      text, URL, effect, condition : String;
-      subs : tstringlist;
+      text, URL : String;
+      subs, effects, conditions : tstringlist;
       public
       constructor create(line : String);
       destructor free();
@@ -167,16 +167,18 @@ constructor selec.create(line: string);
 begin
   self.state := 1;
   self.subs := tstringlist.create;
+  self.effects := TStringList.Create;
+  self.conditions := TStringList.Create;
   Unit1.Form1.split('|',line,self.subs);
   self.state := strtoint(self.subs[0]);
   self.text := self.subs[1];
   self.URL := self.subs[2];
   case self.state of
-    1: self.condition := self.subs[3];
-    2: self.effect := self.subs[3];
+    1: Unit1.Form1.split(';',self.subs[3],self.conditions);
+    2: Unit1.Form1.split(';', Self.subs[3], self.effects);
     3:Begin
-    self.condition := self.subs[3];
-    self.effect := self.subs[4];
+    Unit1.Form1.split(';',self.subs[3],self.conditions);
+    Unit1.Form1.split(';', Self.subs[4], self.effects);
     End;
   end;
 end;
@@ -185,23 +187,16 @@ end;
 function selec.checkForCondition(player: Tplayer) : String;
 var subs : Tstringlist;
   con : String;
-  con2, i: Integer;
+  con2: Integer;
   abfrage : String;
 begin
-  if self.state <> 0 then
-  Begin
-    subs := Tstringlist.Create;
-    subs[0]:= 'Gold';
-    subs[1]:= 10;
-    result := '';
-    //Form1.split(':',self.condition, subs);
-    con := (subs[1]);
-    abfrage := subs[0];
-  End;
-
+  subs := Tstringlist.Create;
   if (self.state = 1) or (self.state = 3) then
     Begin
-
+      result := '';
+      Form1.split(':',self.conditions[0], subs);
+      con := (subs[1]);
+      abfrage := subs[0];
       //Abfrage für die spez. Befehle
       //Wenn vorhanden dann result '' wenn nicht dann String
       case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength', 'Item']) of
@@ -236,41 +231,7 @@ begin
         else result := 'Item ' + con;
       End;
       end;
-    End
-
-    else if self.state = 2 then
-      Begin
-         case IndexStr(abfrage,['Gold','Armor', 'Strength']) of
-         0:Begin
-           con2 := strtoint(con);
-           if (con2 < 0) and (player.gold > (con2 * -1)) then
-             result := ''
-           else
-            result := con + ' Gold';
-           End;
-         1: Begin
-            con2 := strtoint(con);
-            if (con2 < 0) and (player.armor > (con2 * -1)) then
-              result := ''
-            else
-              result := con + ' Armor';
-            End;
-         2:Begin
-           con2 := strtoint(con);
-           if (con2 < 0) and (player.strength > (con2 * -1)) then
-              result := ''
-           else
-            result := con + ' Strength';
-         End;
-         3: Begin
-            for i := 0 to player.items.Count - 1 do
-              if (con[1] = '-') and (player.items[i] = con) then
-                result := ''
-              else
-                result := 'Item ' + con;
-           End;
-         end;
-      End;
+    End;
     subs.Free;
 end;
 

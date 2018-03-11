@@ -134,6 +134,7 @@ end;
 procedure TForm1.Button8Click(Sender: TObject);
 begin
   player := Tplayer.create(0, 0, 30, 10);
+  Memo1.Lines.Clear;
   //player.addItem('Start Item');
   Form3.onUpdate(player);
   data:= GetCurrentDir() + '\Story\Prolog1.txt';
@@ -150,11 +151,16 @@ var l , i : Integer;
   test2:Integer;
 Begin
     subs := getText(data);
-    for j := 1 to strtoint(subs[0]) do
-      Begin
-       Memo1.Lines.Append(subs[j]);
-       Memo1.Lines.Append('');
-      End;
+    Memo1.Lines.BeginUpdate;
+    try
+      for j := 1 to strtoint(subs[0]) do
+        Begin
+        Memo1.Lines.Append(subs[j]);
+        Memo1.Lines.Append('');
+        End;
+    finally
+      Memo1.Lines.EndUpdate;
+    end;
    // for i := strtoint(subs[0]) + 2 to strtoint(subs[0])+2 + strtoint(subs[strtoint(subs[0])+1])  do
     //Begin
 
@@ -206,7 +212,7 @@ var URL : String;
   i : Integer;
 begin
   if (selecs[ButtonSelec -1].getState = 2) or (selecs[ButtonSelec -1].getState = 3) THEN
-    player.setEffect(selecs[ButtonSelec -1].getEffect);
+    player.setEffect(selecs[ButtonSelec -1].getEffects);
   //wenn die nächste URL leer ist dann aufhören
   URL := selecs[ButtonSelec - 1].getURL;
   if  URL <> '' then
@@ -216,9 +222,11 @@ begin
    data := dir + selecs[ButtonSelec -1].getURL;
    for i := 0 to 2 do
    Begin
-    selecs[i].free;
+    if selecs[i] <> nil then
+      selecs[i].free;
     selecs[i] := nil;
    End;
+   Memo1.Lines.Clear;
    StoryAblauf();
   End
   else

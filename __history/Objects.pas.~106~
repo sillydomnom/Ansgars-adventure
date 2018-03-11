@@ -19,13 +19,13 @@ type
       function getItems() : tstringlist;
       function checkForItem(item : String) : boolean;
       //setters
-      procedure setEffect(effect : String);
+      procedure setEffect(effect : tstringlist);
   end;
   selec = class
     private
       state : integer;
-      text, URL, effect, condition : String;
-      subs : tstringlist;
+      text, URL : String;
+      subs, effects, conditions : tstringlist;
       public
       constructor create(line : String);
       destructor free();
@@ -34,7 +34,7 @@ type
       function getState() : integer;
       function getText() : String;
       function getURL() : String;
-      function getEffect : String;
+      function getEffect : tstringlist;
     end;
 
 implementation
@@ -107,11 +107,11 @@ begin
 end;
 
 //setters
-procedure Tplayer.setEffect(effect : String);
+procedure Tplayer.setEffect(effect : tstringlist, Form : Unit1.TForm1);
 var effects: tstringlist;
     i : integer;
 Begin
- Unit1.Form1.split(':',effect,effects);
+ Form.split(':',effect[0],effects);
  case IndexStr(effects[0],['Gold', 'Armor', 'HP', 'Strength','Item']) of
  0:
  Begin
@@ -167,16 +167,18 @@ constructor selec.create(line: string);
 begin
   self.state := 1;
   self.subs := tstringlist.create;
+  self.effects := TStringList.Create;
+  self.conditions := TStringList.Create;
   Unit1.Form1.split('|',line,self.subs);
   self.state := strtoint(self.subs[0]);
   self.text := self.subs[1];
   self.URL := self.subs[2];
   case self.state of
-    1: self.condition := self.subs[3];
-    2: self.effect := self.subs[3];
+    1: Unit1.Form1.split(';',self.subs[3],self.conditions);
+    2: Unit1.Form1.split(';', Self.subs[3], self.effects);
     3:Begin
-    self.condition := self.subs[3];
-    self.effect := self.subs[4];
+    Unit1.Form1.split(';',self.subs[3],self.conditions);
+    Unit1.Form1.split(';', Self.subs[4], self.effects);
     End;
   end;
 end;
@@ -192,7 +194,7 @@ begin
   if (self.state = 1) or (self.state = 3) then
     Begin
       result := '';
-      Form1.split(':',self.condition, subs);
+      Form1.split(':',self.conditions[0], subs);
       con := (subs[1]);
       abfrage := subs[0];
       //Abfrage für die spez. Befehle
@@ -250,7 +252,7 @@ end;
 
 function selec.getEffect;
 begin
-  result := self.effect;
+  result := self.effects;
 end;
 
 destructor selec.free;

@@ -240,8 +240,8 @@ object Form3: TForm3
   object Label4: TLabel
     Left = 32
     Top = 240
-    Width = 273
-    Height = 33
+    Width = 36
+    Height = 20
     Caption = 'Inv'
     WordWrap = True
   end

@@ -12,6 +12,7 @@ object Form1: TForm1
   Font.Name = 'Courier'
   Font.Style = []
   OldCreateOrder = False
+  Position = poOwnerFormCenter
   PixelsPerInch = 96
   TextHeight = 20
   object Memo1: TMemo
@@ -24,8 +25,6 @@ object Form1: TForm1
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = []
-    Lines.Strings = (
-      '')
     ParentFont = False
     ReadOnly = True
     ScrollBars = ssVertical

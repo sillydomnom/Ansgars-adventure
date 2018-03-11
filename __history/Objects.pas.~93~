@@ -15,6 +15,8 @@ type
       function getGold() : integer;
       function getArmor() : integer;
       function getHealth() : integer;
+      function getStrength() : integer;
+      function getItems() : tstringlist;
       function checkForItem(item : String) : boolean;
       //setters
       procedure setEffect(effect : String);
@@ -41,6 +43,7 @@ uses Unit1;
 
 constructor Tplayer.create(gold, armor, health, strength : integer);
 begin
+   self.items := Tstringlist.Create;
    self.gold := gold;
    self.armor := armor;
    self.health := health;
@@ -61,8 +64,10 @@ function Tplayer.checkForItem(item : String) : boolean;
 var i : integer;
 Begin
  result:= false;
- for i := 0 to self.items.Count -1 do
+ if self.items.Count <> 0 then
  Begin
+  for i := 0 to self.items.Count -1 do
+    Begin
     if item = self.items[i] then
       Begin
       result := true;
@@ -71,6 +76,7 @@ Begin
     else if self.items.Count -1 = i  then
       result:= false;
 
+    End;
  End;
 
 End;
@@ -88,6 +94,16 @@ end;
 function Tplayer.getHealth;
 begin
   result := self.health;
+end;
+
+function Tplayer.getStrength;
+begin
+  result := self.strength;
+end;
+
+function Tplayer.getItems;
+begin
+  result:= self.items;
 end;
 
 //setters
@@ -169,45 +185,93 @@ end;
 function selec.checkForCondition(player: Tplayer) : String;
 var subs : Tstringlist;
   con : String;
-  con2: Integer;
+  con2, i: Integer;
   abfrage : String;
 begin
+  if self.state <> 0 then
+  Begin
+    subs := Tstringlist.Create;
+    subs[0]:= 'Gold';
+    subs[1]:= 10;
+    result := '';
+    //Form1.split(':',self.condition, subs);
+    con := (subs[1]);
+    abfrage := subs[0];
+  End;
+
   if (self.state = 1) or (self.state = 3) then
     Begin
-      result := '';
-      Form1.split(':',self.condition, subs);
-      con := (subs[1]);
-      abfrage := subs[0];
+
       //Abfrage für die spez. Befehle
       //Wenn vorhanden dann result '' wenn nicht dann String
       case IndexStr(abfrage,['Gold', 'Armor', 'HP', 'Strength', 'Item']) of
-      0:
+      0:Begin
         con2 := StrToInt(con);
         if player.gold > con2 then
           result := ''
-        else result := con + 'Gold';
-      1:
-        con2 := StrToInt(con)
+        else result := con + ' Gold';
+      End;
+      1:Begin
+        con2 := StrToInt(con);
         if player.armor > con2 then
            result := ''
-        else result := con + 'Armor';
-      2:
+        else result := con + ' Armor';
+      End;
+      2:Begin
         con2 := StrToInt(con);
         if player.health > con2 then
           result := ''
         else
-          result := con + 'HP';
-      3:
+          result := con + ' HP';
+      End;
+      3:Begin
         con2 := StrToInt(con);
         if player.strength > con2 then
           result := ''
-        else result := con + 'String';
-      4:
-        if player.checkForItem(con)
+        else result := con + ' Strength';
+      End;
+      4:Begin
+        if player.checkForItem(con) then
           result := ''
-        else result := 'Item' + con;
+        else result := 'Item ' + con;
+      End;
       end;
-    End;
+    End
+
+    else if self.state = 2 then
+      Begin
+         case IndexStr(abfrage,['Gold','Armor', 'Strength']) of
+         0:Begin
+           con2 := strtoint(con);
+           if (con2 < 0) and (player.gold > (con2 * -1)) then
+             result := ''
+           else
+            result := con + ' Gold';
+           End;
+         1: Begin
+            con2 := strtoint(con);
+            if (con2 < 0) and (player.armor > (con2 * -1)) then
+              result := ''
+            else
+              result := con + ' Armor';
+            End;
+         2:Begin
+           con2 := strtoint(con);
+           if (con2 < 0) and (player.strength > (con2 * -1)) then
+              result := ''
+           else
+            result := con + ' Strength';
+         End;
+         3: Begin
+            for i := 0 to player.items.Count - 1 do
+              if (con[1] = '-') and (player.items[i] = con) then
+                result := ''
+              else
+                result := 'Item ' + con;
+           End;
+         end;
+      End;
+    subs.Free;
 end;
 
 function selec.getState;

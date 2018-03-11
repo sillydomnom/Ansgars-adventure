@@ -134,6 +134,7 @@ end;
 procedure TForm1.Button8Click(Sender: TObject);
 begin
   player := Tplayer.create(0, 0, 30, 10);
+  Memo1.Lines.Clear;
   //player.addItem('Start Item');
   Form3.onUpdate(player);
   data:= GetCurrentDir() + '\Story\Prolog1.txt';
@@ -150,11 +151,16 @@ var l , i : Integer;
   test2:Integer;
 Begin
     subs := getText(data);
-    for j := 1 to strtoint(subs[0]) do
-      Begin
-       Memo1.Lines.Append(subs[j]);
-       Memo1.Lines.Append('');
-      End;
+    Memo1.Lines.BeginUpdate;
+    try
+      for j := 1 to strtoint(subs[0]) do
+        Begin
+        Memo1.Lines.Append(subs[j]);
+        Memo1.Lines.Append('');
+        End;
+    finally
+      Memo1.Lines.EndUpdate;
+    end;
    // for i := strtoint(subs[0]) + 2 to strtoint(subs[0])+2 + strtoint(subs[strtoint(subs[0])+1])  do
     //Begin
 

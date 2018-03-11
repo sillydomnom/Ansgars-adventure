@@ -21,6 +21,6 @@ Willst du dich Umsehen?
 Willst du lieber vom Unfallort fliehen?
 Oder willst du dich lieber hinlegen?
 3
-0|Umsehen|Story1a.txt
-2|Fliehen|Srory1b.txt|HP:-5
-0|Ausruhen|Story1c.txt
+0|Umsehen|/Story/Story1a.txt
+2|Fliehen|/Story/Story1b.txt|HP:-5
+0|Ausruhen|/Story/Story1c.txt

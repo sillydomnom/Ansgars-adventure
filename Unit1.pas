@@ -23,6 +23,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button8Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
 
   private
     { Private-Deklarationen }
@@ -42,7 +43,7 @@ type
   Form1: TForm1;
 
 implementation
-  uses Unit3, Unit2;
+  uses Unit3, Unit2, save;
 
   var
 
@@ -129,6 +130,12 @@ begin
   //dlg.Show;
   Form1.Hide;
   Form2.Show;
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+  Form4.Show;
+  Form1.Enabled := false;
 end;
 
 procedure TForm1.Button8Click(Sender: TObject);

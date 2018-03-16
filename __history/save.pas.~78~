@@ -45,32 +45,38 @@ procedure TForm4.fillFile(list : tstringlist; existing : boolean; save : integer
 var player : Tplayer;
   i: Integer;
   l: Integer;
+  test : string;
 Begin
   player := Form1.getPlayer;
   if not(existing) then
   Begin
     list := list.Create;
-    list[0] := InputBox('Profil Name eingeben!', 'Geben Sie Ihrem Profil einen Namen!', 'Ansgar');
-  End
-  else
-  Begin
-    list[1] := Form1.getData();
-    list[2] := inttostr(player.getGold);
-    list[3] := inttostr(player.getArmor);
-    list[4] := inttostr(player.getHealth);
-    list[5] := inttostr(player.getStrength);
-    list[6] := inttostr(player.getItems.Count);
+    list.Append(InputBox('Profil Name eingeben!', 'Geben Sie Ihrem Profil einen Namen!', 'Ansgar'));
+  End;
+    list.append(Form1.getData());
+    list.append(inttostr(player.getGold));
+    list.append(inttostr(player.getArmor));
+    list.append(inttostr(player.getHealth));
+    list.append(inttostr(player.getStrength));
+    list.append(inttostr(player.getItems.Count));
     for i := 0 to player.getItems.Count -1 do
     Begin
-      list[i + 7] := player.getItems[i];
+      list.append(player.getItems[i]);
     End;
-  End;
   for l := 0 to list.Count - 1 do
+  Begin
+    test := list[l];
     case save of
-    1: WriteLn(Save1, list[i]);
-    2: WriteLn(Save2, list[i]);
-    3: WriteLn(Save3, list[i]);
+    1: WriteLn(Save1, list[l]);
+    2: WriteLn(Save2, list[l]);
+    3: WriteLn(Save3, list[l]);
     end;
+  End;
+  case save of
+  1: CloseFile(Save1);
+  2: CloseFile(Save2);
+  3: CloseFile(Save3);
+  end;
   SaveStats1.free;
   SaveStats2.free;
   SaveStats3.free;
@@ -86,18 +92,21 @@ begin
     AssignFile(Save1, filename);
     Reset(Save1);
     Button1.Caption := SaveStats1[0];
+    CloseFile(Save1);
   End;
   2:Begin
     SaveStats2:= Form1.getText(filename);
     AssignFile(Save2, filename);
     Reset(Save2);
     Button2.Caption := SaveStats1[0];
+    CloseFile(Save2);
   End;
   3:Begin
     SaveStats1:= Form1.getText(filename);
     AssignFile(Save1, filename);
     Reset(Save3);
     Button1.Caption := SaveStats1[0];
+    CloseFile(Save3);
   End;
   end;
 
@@ -107,12 +116,23 @@ procedure TForm4.Button1Click(Sender: TObject);
 begin
   if not(SaveExist1) then
   Begin
+    DeleteFile(GetCurrentDir() + '\Saves\save1.zrk');
     AssignFile(Save1, GetCurrentDir() + '\Saves\save1.zrk');
-    Rewrite(Save1);
+    try
+
+      Rewrite(Save1);
+    finally
+      ShowMessage('Datei schon vorhanden?')
+    end;
     fillFile(SaveStats1, false, 1);
   End
     else
+    Begin
+     DeleteFile(GetCurrentDir() + '\Saves\save1.zrk');
+     AssignFile(Save1, GetCurrentDir() + '\Saves\save1.zrk');
+     Rewrite(Save1);
      fillFile(SaveStats1, true, 1);
+    End;
 end;
 
 procedure TForm4.Button2Click(Sender: TObject);
@@ -125,7 +145,10 @@ begin
     fillFile(SaveStats2, false, 2);
   End
     else
+    Begin
+     Rewrite(Save2);
      fillFile(SaveStats2, true, 2);
+    End;
 end;
 
 procedure TForm4.Button3Click(Sender: TObject);
@@ -138,7 +161,10 @@ if not(SaveExist3) then
     fillFile(SaveStats3, false, 3);
   End
     else
+     Begin
+     Rewrite(Save3);
      fillFile(SaveStats3, true, 3);
+     End;
 end;
 
 procedure TForm4.FormCreate(Sender: TObject);
@@ -149,7 +175,7 @@ begin
   if FileExists(GetCurrentDir() + '\Saves\save1.zrk') then
   Begin
     initializeButton(1, GetCurrentDir() + '\Saves\save1.zrk');
-    //SaveExist1 := true;
+    SaveExist1 := true;
   End
   else SaveExist1 := false;
 
@@ -164,7 +190,7 @@ begin
     initializeButton(3, GetCurrentDir() + '\Saves\save3.zrk');
     SaveExist3 := true;
   End
-  else SaveExist1 := false;
+  else SaveExist3 := false;
 end;
 
 end.

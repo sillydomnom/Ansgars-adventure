@@ -1,7 +1,6 @@
 object Form4: TForm4
   Left = 0
   Top = 0
-  BorderIcons = []
   Caption = 'Select Save Profile'
   ClientHeight = 389
   ClientWidth = 713

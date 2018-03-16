@@ -1,14 +1,14 @@
 11
-Ein Gegenstand soll es sein, am besten besten ein Stumpfer so, wäre er nur außer Gesfecht gesetzt. Im Notfall, wenn du keinen stumpfen Gegenstand findest, dann würde auch ein Spitzer gut sein.
-Du willst ihn nicht sofort töten, aber wenn es sein muss, muss der alte Mann sterben.
-Dein Adrelalinspiegel steigt ins unermäßliche, deine Schmerzen scheinen in diesen Moment vollkomen zu verschwinden.
-Du suchst die Umgebung ab, rechts von dir, ungefähr zwei bis drei Meter entfernt, liegt ein großer Ast. Du rollst dich nach rechts, relativ langsam und leise, damit der Mann nicht wach wird.
-Als du den Ast endlich erreicht hast, siehst du, dass er ein bisschen zu dünn ist für dein vorhaben, da aber nichts weiteres in deiner Nähe ist, muss wohl oder übel, der Ast ausreichen.
-Du begibst dich wieder zum alten Mann. Du stehst vor ihn mit einen Stock in deiner rechten Hand. Er schläft so hilflos vor dir. Irgendwie tut dir der alte Mann leid, er hätte bestimmt noch ein oder zwei schöne Jahre vor sich gehabt.
+Ein Gegenstand soll es sein, am besten ein Stumpfer so, waere er nur ausser Gefecht gesetzt. Im Notfall, wenn du keinen stumpfen Gegenstand findest, dann wuerde auch ein Spitzer gut sein.
+Du willst ihn nicht sofort toeten, aber wenn es sein muss, muss der alte Mann sterben.
+Dein Adrenalinspiegel steigt ins Unermessliche, deine Schmerzen scheinen in diesen Moment vollkomen zu verschwinden.
+Du suchst die Umgebung ab, rechts von dir, ungefaehr zwei bis drei Meter entfernt, liegt ein grosser Ast. Du rollst dich nach rechts, relativ langsam und leise, damit der Mann nicht wach wird.
+Als du den Ast endlich erreicht hast, siehst du, dass er ein bisschen zu duenn ist fuer dein Vorhaben, da aber nichts weiteres in deiner Naehe ist, muss wohl oder uebel, der Ast ausreichen.
+Du begibst dich wieder zum alten Mann. Du stehst vor, ihn mit einem Stock in deiner rechten Hand. Er schlaeft so hilflos vor dir. Irgendwie tut dir der alte Mann leid, er haette bestimmt noch ein oder zwei schoene Jahre vor sich gehabt.
 Dennoch ist heute sein Todestag und du bist sein Henker.
-Du holst mit den Ast aus und willst ihn direkt an der Schläfe treffen, doch ein, zwei Zentimeter vor seinen Kopf, blockt der Mann deine  Schlag ab.
-Er enwendet dir die Waffe mit einen geschickten Schlag auf dein Handgelenk. Er gibt dir noch ein paar Schläge auf deinen Korpus. Du versuchst sie abzuwehren, doch seine Schläge sind so schnell, dass du die in deinen Zustand nicht sehen kannst.
-Benommen taumelst du drei Schritte zurück, währenddessen nimt der Mann deinen Stock und schlägt dir damit die Beine weg.
-Du fällst hart auf dem Boden und bekommst 5 Schaden
+Du holst mit den Ast aus und willst ihn direkt an der Schlaefe treffen, doch ein, zwei Zentimeter vor seinen Kopf, blockt der Mann deine  Schlag ab.
+Er entwendet dir die Waffe mit einen geschickten Schlag auf dein Handgelenk. Er gibt dir noch ein paar Schlaege auf deinen Korpus. Du versuchst sie abzuwehren, doch seine Schlaege sind so schnell, dass du die in deinen Zustand nicht sehen kannst.
+Benommen taumelst du drei Schritte zurueck, waehrenddessen nimt der Mann deinen Stock und schlaegt dir damit die Beine weg.
+Du faellst hart auf dem Boden und bekommst 5 Schaden
 1
-2|Weiter|Story3'1.txt|HP:-5
+2|Weiter|\Story\Story3'1.txt|HP:-5

@@ -1,0 +1,9 @@
+Name
+player_URL_pos
+player_gold
+player_armor
+player_health
+player_strength
+player_items_count
+player_items[0]
+player_items[1]

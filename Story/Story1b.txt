@@ -1,9 +1,9 @@
-﻿6
-Alle Leute sind um dich herum tot. Dir durchfährt ein kalter Schauer der Angst.
-Du entscheidest es wäre klüger, wenn du weggehst von der Unfallstelle, damit nicht du mit dem Unfall in Verbindung gebracht wirst und für immer in das Gefängnis kommst, weggeschlossen vom Tageslicht und der Zivilisation.
-Du sammelst deine ganze Kraft und fängst langsam an zu laufen. Du merkst, wie das Laufen dir immer einfacher fällt und fängst an zu rennen, doch nach wenigen Schritten, überfluten die Wellen des Schmerzes deinen Körper. 
-Diene Beine verkrampfen sich und jeder weitere Schritt wird schmerzvoller, bis du endgültig das Gefühl in deinen Beinen verlierst und mit dem Kopf auf dem Boden aufkommst. 
-Du wirst bewusstlos und dir werden fünf Lebenspunkte abgezogen. Du hast nur noch 20 Lebenspunkte
+6
+Alle Leute sind um dich herum tot. Dir durchfaehrt ein kalter Schauer der Angst.
+Du entscheidest es waere klueger, wenn du weggehst von der Unfallstelle, damit nicht du mit dem Unfall in Verbindung gebracht wirst und fuer immer in das Gefaengnis kommst, weggeschlossen vom Tageslicht und der Zivilisation.
+Du sammelst deine ganze Kraft und faengst langsam an zu laufen. Du merkst, wie das Laufen dir immer einfacher faellt und faengst an zu rennen, doch nach wenigen Schritten, ueberfluten die Wellen des Schmerzes deinen Koerper. 
+Diene Beine verkrampfen sich und jeder weitere Schritt wird schmerzvoller, bis du endgueltig das Gefuehl in deinen Beinen verlierst und mit dem Kopf auf dem Boden aufkommst. 
+Du wirst bewusstlos und dir werden fuenf Lebenspunkte abgezogen. Du hast nur noch 20 Lebenspunkte
 Klicke auf weiter...
 1
-0|Weiter|/Story/Story2.text
+0|Weiter|\Story\Story2.txt

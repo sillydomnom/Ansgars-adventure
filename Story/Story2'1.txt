@@ -1,16 +1,16 @@
-12
-Du kanalisierst deine Kräfte und konzentrierst dich deine Schmerzen zu verdrängen. Mit deinen Armen stützt du dich auf und drückst dich langsam nach oben. Die Schmerzen werden stärker, du schaffst es gerade so einen Schmerzensschrei zu unterdrücken.
+13
+Du kanalisierst deine Kraefte und konzentrierst dich deine Schmerzen zu verdraengen. Mit deinen Armen stuetzt du dich auf und drueckst dich langsam nach oben. Die Schmerzen werden staerker, du schaffst es gerade so einen Schmerzensschrei zu unterdruecken.
 Du hast es geschafft du kniest nun. Langsam und leise stehst du auf, deine Schmerzen in Arme und Beine ignorierst du komplett. Du stehst......
-Schwerfällig und von Schmerzen gepeinigt bewegst du deinen kraftlosen Körper in die Richtung des Waldes, weg vom schlafenden Mann. Die Bewegungen rauben deinen Geist und deinen Körper die letzten Kräfte.
-Dennoch schaffst du es bis zum Anfang des Waldes. Doch es wartet gleich die nächste Hürde für dich. Es ist eine ein Meter hohe Mauer aus Gestrüpp. In deinen körperlichen Zustand, scheint dies eine unüberwindbare Barriere zu sein. 
-Dennoch hebst du deine Beine und steigst über die Büsche rüber. Du als dein rechter Fuß wieder auf den Waldboden berührt, sackst du von den unaufhörlichen Schmerzen auf den Boden. 
-Du gibst einen leisen Seufzer von dir. Hoffentlich ist der alte Mann nicht durch den Lärm aufgewacht. Du siehst nach hinten, zurück zum alten Herrn und siehst, dass er noch in aller Seelenruhe schläft.
-Du musst den Schmerz ignorieren und weiter laufen. Du atmest tief ein und aus und erhebst dich aus der gehockten Position. Du machst kleine Schritte vorwärts. Das Gestrüpp liegt hinter dir.
-Vor dir liegt nur noch der Wald mit seiner unendlichen Dunkelheit. Du gehst weiter, doch bevor du am nächsten Baum vorbei bist, stolperst du über eine Wurzel.
-Du versuchst dich mit deinen Armen den Fall abzufedern, doch dein geschwächter Körper halt den gewaltigen Impuls deines Falls nicht aus.
-Du krachst mit einem gewaltigen Knall in das Unterholz des Waldes. Die Äste bersten unter der Last deines Gewichtes. Du fällst wieder in Ohnmacht, ein Gefühl, welches für dich langsam vertraut vorkommt.
+Schwerfaellig und von Schmerzen gepeinigt bewegst du deinen kraftlosen Körper in die Richtung des Waldes, weg vom schlafenden Mann. Die Bewegungen rauben deinen Geist und deinen Körper die letzten Kraefte.
+Dennoch schaffst du es bis zum Anfang des Waldes. Doch es wartet gleich die naechste Huerde fuer dich. Es ist eine ein Meter hohe Mauer aus Gestruepp. In deinen körperlichen Zustand, scheint dies eine unueberwindbare Barriere zu sein. 
+Dennoch hebst du deine Beine und steigst ueber die Buesche rueber. Du als dein rechter Fuss wieder auf den Waldboden beruehrt, sackst du von den unaufhörlichen Schmerzen auf den Boden. 
+Du gibst einen leisen Seufzer von dir. Hoffentlich ist der alte Mann nicht durch den Laerm aufgewacht. Du siehst nach hinten, zurueck zum alten Herrn und siehst, dass er noch in aller Seelenruhe schlaeft.
+Du musst den Schmerz ignorieren und weiter laufen. Du atmest tief ein und aus und erhebst dich aus der gehockten Position. Du machst kleine Schritte vorwaerts. Das Gestruepp liegt hinter dir.
+Vor dir liegt nur noch der Wald mit seiner unendlichen Dunkelheit. Du gehst weiter, doch bevor du am naechsten Baum vorbei bist, stolperst du ueber eine Wurzel.
+Du versuchst dich mit deinen Armen den Fall abzufedern, doch dein geschwaechter Körper halt den gewaltigen Impuls deines Falls nicht aus.
+Du krachst mit einem gewaltigen Knall in das Unterholz des Waldes. Die Aeste bersten unter der Last deines Gewichtes. Du faellst wieder in Ohnmacht, ein Gefuehl, welches fuer dich langsam vertraut vorkommt.
 Du bekommst 5 Schaden.
-Das letzte was du mitbekommst sind das Geräusch von brechenden Ästen hinter dir...
+Das letzte was du mitbekommst sind das Geraeusch von brechenden aesten hinter dir...
 Klicke auf Weiter...
 1
-0|Weiter|Story3'1.txt
+0|Weiter|\Story\Story3'1.txt

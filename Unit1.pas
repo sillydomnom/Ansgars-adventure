@@ -38,6 +38,8 @@ type
       procedure StoryAblauf();
       procedure StoryContinue();
       procedure StoryEnd();
+      function getData() : String;
+      function getPlayer() : Tplayer;
   end;
   var
   Form1: TForm1;
@@ -60,6 +62,16 @@ implementation
 
 {$R *.dfm}
 
+
+function TForm1.getData;
+begin
+  result := data;
+end;
+
+function TForm1.getPlayer;
+begin
+  result := player;
+end;
 
 procedure TForm1.closeAll();
 Begin
@@ -134,6 +146,7 @@ end;
 
 procedure TForm1.Button6Click(Sender: TObject);
 begin
+  Form4.FormCreate(Form1);
   Form4.Show;
   Form1.Enabled := false;
 end;

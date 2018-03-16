@@ -14,6 +14,19 @@ object Form2: TForm2
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 20
+  object Label1: TLabel
+    Left = 104
+    Top = 184
+    Width = 771
+    Height = 65
+    Caption = 'Ansgar'#39's Adventure'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -67
+    Font.Name = 'Courier'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
   object Button1: TButton
     Left = 40
     Top = 472
@@ -30,6 +43,7 @@ object Form2: TForm2
     Height = 73
     Caption = 'Impressum'
     TabOrder = 1
+    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 360

@@ -39,7 +39,7 @@ type
 
 implementation
 
-uses Unit1;
+uses Unit1, Unit3;
 
 constructor Tplayer.create(gold, armor, health, strength : integer);
 begin
@@ -110,8 +110,16 @@ end;
 procedure Tplayer.setEffect(effect : tstringlist);
 var effects: tstringlist;
     i : integer;
+    s, s1 : String;
+  l: Integer;
 Begin
+ s1 := effect[0];
+ effects := tstringlist.Create;
  Unit1.Form1.split(':',effect[0],effects);
+
+ for l := 0 to effects.Count - 1 do
+    s1 := effects[l];
+
  case IndexStr(effects[0],['Gold', 'Armor', 'HP', 'Strength','Item']) of
  0:
  Begin
@@ -160,6 +168,7 @@ Begin
    Unit1.Form1.Memo1.Lines.Append('');
  End;
  end;
+ Form3.onUpdate(self);
 End;
 
 //selection

@@ -1,13 +1,13 @@
 ﻿10
-Du hast dich entschieden den alten Mann mit seinen Gürtel zu erdrosseln. 
-Dein Adrelalinspiegel steigt ins unermäßliche, deine Schmerzen scheinen in diesen Moment vollkomen zu verschwinden.
-Dein Plan besteht daraus, den Gürtel dem Mann zu entwenden und ihn langsam zu erdrosseln. Vielleicht wird er noch um Hilfe bettlen doch dann wirst du nur noch fester die Schlinge zuziehen.
+Du hast dich entschieden den alten Mann mit seinen Guertel zu erdrosseln. 
+Dein Adrenalinspiegel steigt ins unermessliche, deine Schmerzen scheinen in diesen Moment vollkommen zu verschwinden.
+Dein Plan besteht daraus, den Guertel dem Mann zu entwenden und ihn langsam zu erdrosseln. Vielleicht wird er noch um Hilfe bettlen doch dann wirst du nur noch fester die Schlinge zu ziehen.
 Der Mann wird sterben und dass heute noch.
-Du stehst langsam und leise auf, greifst nach dem Knoten, mit welcher der Gürtel befestigt ist und löst ihn behutsam.
-Du formst aus der Flachs oder Sial Schnur ein Schlinge, obwohl als du es nun in der Hand hälst merkst du, dass es eindeutig Flachs ist.
-Die Schlinge legst du um den Kopf des alten Mannes, doch in den Moment als du die Schlinge zu ziehen wolltest, wirft dich der Mann, mit einen Teakwondowurf über seine Schulter.
-Du schlägst mit deinen Rücken knallhart auf dem Boden. Man konnte ein leises Knackgeräusch vernehmen.
+Du stehst langsam und leise auf, greifst nach dem Knoten, mit welcher der Guertel befestigt ist und loest ihn behutsam.
+Du formst aus der Flachs oder Sial Schnur ein Schlinge, obwohl als du es nun in der Hand haelst merkst du, dass es eindeutig Flachs ist.
+Die Schlinge legst du um den Kopf des alten Mannes, doch in den Moment als du die Schlinge zu ziehen wolltest, wirft dich der Mann, mit einem Taekwondowurf ueber seine Schulter.
+Du schlaegst mit deinen Ruecken knallhart auf dem Boden. Man konnte ein leises Knackgeraeusch vernehmen.
 Du bekommst 9 Schaden.
 Klicke auf weiter...
 1
-2|weiter|Story3'1.txt|HP:-9
+2|weiter|\Story\Story3'1.txt|HP:-9

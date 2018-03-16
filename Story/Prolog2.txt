@@ -1,11 +1,11 @@
-﻿8
-Du wirst, als einziger Überlebender der Crew, vom Schiff geborgen.
-Du bist so froh, du bist endlichg gerettet. Die Leute des Schiffes helfen dir aus dem Wasser und geben dir eine Decke, um wieder warm zu werden.
-Gerettet, endlich gerettet, doch dieser Gedanke war ein Trugschluss, die Männer bringen dich in Ketten gelegt unter das Deck.
-Dir wird schnell bewusst, dass dies Sklavenhändler sind, sie treten und schlagen, damit du schneller läuft, dich dein ausgehungerter Körper lässt dies nicht zu.
-Deine Augen werden für die nächsten Wochen kein Tageslicht sehen, nur das düstere Licht einer einzelnen Fackeln erleuchtet das untere Deck.
-Du befindest dich, während deiner Zeit auf dem Schiff, in einem Zustand welcher den Wachkoma ähnelt, du nimmst alles wahr, was in deiner Umgebung passiert, doch du kannst mit dieser nciht interagieren.
-Die Männer schleppen dich mit einen Sack über den Kopf vom Schiff auf festen Boden.
-Krieger des Nordens mach dich bereit, denn genau jetzt beginnt dein wahres Abenteuer, in einer Welt voller Integrien, Verrat und Kriegen, beginnt dein kleiner pernsönlicher Kampf.
+8
+Du wirst, als einziger ueberlebender der Crew, vom Schiff geborgen.
+Du bist so froh, du bist endlich gerettet. Die Leute des Schiffes helfen dir aus dem Wasser und geben dir eine Decke, um wieder warm zu werden.
+Gerettet, endlich gerettet, doch dieser Gedanke war ein Trugschluss, die Maenner bringen dich in Ketten gelegt unter das Deck.
+Dir wird schnell bewusst, dass dies Sklavenhaendler sind, sie treten und schlagen, damit du schneller laeuft, dich dein ausgehungerter Koerper laesst dies nicht zu.
+Deine Augen werden fuer die naechsten Wochen kein Tageslicht sehen, nur das duestere Licht einer einzelnen Fackel erleuchtet das untere Deck.
+Du befindest dich, waehrend deiner Zeit auf dem Schiff, in einem Zustand welcher den Wachkoma aehnelt, du nimmst alles wahr, was in deiner Umgebung passiert, doch du kannst mit dieser nciht interagieren.
+Die Maenner schleppen dich mit einem Sack ueber den Kopf vom Schiff auf festen Boden.
+Krieger des Nordens mach dich bereit, denn genau jetzt beginnt dein wahres Abenteuer, in einer Welt voller Intrigen, Verrat und Kriegen, beginnt dein kleiner pernsoenlicher Kampf.
 1
-0|Weiter|/Story/Story1.txt
+0|Weiter|\Story\Story1.txt

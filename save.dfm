@@ -21,6 +21,7 @@ object Form4: TForm4
     Height = 89
     Caption = 'Empty Save Place'
     TabOrder = 0
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 32
@@ -29,6 +30,7 @@ object Form4: TForm4
     Height = 89
     Caption = 'Empty Save Place'
     TabOrder = 1
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 32
@@ -37,5 +39,6 @@ object Form4: TForm4
     Height = 89
     Caption = 'Empty Save Place'
     TabOrder = 2
+    OnClick = Button3Click
   end
 end

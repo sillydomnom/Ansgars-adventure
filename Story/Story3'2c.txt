@@ -1,0 +1,32 @@
+28
+Der Eintopf tat dir gut. Das warme Gefühl in deiner Bauchregion, erfüllt dich mit neuer Kraft.
+Durch den Hunger angetrieben, hast du Eintopf förmlich inhalliert.
+Während du dich weiter im Raum umschaust, ist der Mann noch mit dem Essen beschäftigt. Dein Blick bleibt immer wieder bei der gewaltigten Bücherfront stehen.
+Unter dem Büchern scheint es neuere Exemplare zu geben mit einwandfreien Einband, aber auch welche mit abgenutzten und sogar mit Einbänden, welche kaum noch vorhanden sind.
+Auch im Material der Einbände gibt es Unterschiede, zwischen einfachen Stoff, bis zum gefärbten und verzirrten Leder.
+Du hörst wie der Holzlöffel auf den Tisch gelegt wird. Der Mann ist mit den Essen fertig. Er lehnt sich in seinen Stuhl zurück und wischt sich mit einen Stück Stoff den Mund ab.
+Sobald er damit fertig war, beginnt er zu reden und dich zu fragen.
+"Also erzähl mal Junge was war passiert, warum hast du dort gelegen?"
+Du schaust ihn in die Augen, kalte blaue Augen, wie das klare Wasser des Ozeans.
+"Komm Bursche sprich endlich, ich lebe auch nicht eweig."
+Du beginnst langsam zu erzählen von deinem Dorf, vom kalten Winter und von der Mission, auf die dich König Knut den Großen geschickt hat.
+"Bursche, dass erklärt jetzt aber immernoch nicht, wie in den Wald gekommen bist."
+Du erzählst weiter, von deiner Krankheit, dem Aufenthalt in den angel-sachsischen Provinzen und dem Sturm. Du erzählst von den Männer, welche dich gefangen genommen haben.
+"Und an mehr kannst du dich nicht erinnern?"
+"Nein, ich fiel immer wieder in Ohnmacht. Ich kann mich nur an die Bruchstücke erinnern, von den ich dir erzählt habe."
+"Eine spannende Geschichte, aber ob sie wahr ist, ist eine andere Sache, obwohl die Verletzungen dazu passen. Aber du weißt wirklich nicht, wer die Männer waren."
+"Nein, auch dies weiß ich nicht. Sie sprachen eine Sprache, welche die Meiner ähnlich ist, aber diesen Dialekt konnte ich nicht verstehen."
+Der Mann dreht sich zum Bücherreagl um, nach einigen Sekunden greift er nach einen Buch und schlägt es auf dem Esstisch auf. Es ist ein Buch voller Karten.
+"Also, wenn die Sprache ähnlich war, wie deine, dann können es bloß die Sachsen sein, oder die Friesen gewesen sein, alles Feinde deines König."
+Er umkreist mit seinen Finger die Regionen der Friesen, Franken und Sachsen.
+"Was willst du jetzt machen Bursche?"
+"Ich will nach Hause, ich muss dem König Bericht erstatten von Unwetter und dem Überfall."
+"Mhmmmm, ein weiter Weg, dein Dorf ist hier", er zeigt auf die Inseln in der östlichen See, "und wir sind hier", er zeigt auf die westlichste Region auf der Karte, Landformation, ähnlich einer Halbinsel.
+"Deine einzige Möglichkeit ist auf den Winter zu warten, der das Wasser vereist. Es muss ein starker und kalter Winter werden, damit dass passiert. Aber durch das Land deiner Feinde kannst du nicht einfach wandern.
+Es wäre viel zu gefährlich. Hör mir zu, ich werde dir helfen wieder nach Hause zu kommen, dafür musst du mir aber zuerst einen kleinen Gefallen tun. Einverstanden?"
+"Was für ein Gefallen?", fragst du.
+"Das ist gerade egal, nimmst tust du für mich den Gefallen?"
+Nimmst du das Angebot an, oder nicht?
+2
+0|Angebot anehmen|\Story\Story4.txt
+0|Angebot ablehnen|\Story\Ende1.txt

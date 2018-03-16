@@ -1,18 +1,18 @@
 15
-Dein Köper schmerzt, jede Bewegung, ob hastig oder langsam, könnten bleibende Schäden bei dir verursachen. 
-Deswegen entscheidest du dich, den Mann um medizinische Hilfe zu bitten, im Notfall, falls er dir etwas antun möchte, kannst du dich immernoch versuchen zu wehren.
-Du räusperst dich leise. Er wacht nicht auf. Du räusperst dich nochmal mal. Doch der Mann wacht nicht auf.
+Dein Koeper schmerzt, jede Bewegung, ob hastig oder langsam, koennten bleibende Schaeden bei dir verursachen. 
+Deswegen entscheidest du dich, den Mann um medizinische Hilfe zu bitten, im Notfall, falls er dir etwas antun moechte, kannst du dich immernoch versuchen zu wehren.
+Du raeusperst dich leise. Er wacht nicht auf. Du raeusperst dich nochmal mal. Doch der Mann wacht nicht auf.
 Mit einer leisen und zitternen Stimme sagst du:"Wasser...Bitte ich brauche Wasser."
-Er öffnet langsam seine Augen."Du bist wach. Hätte gedacht bei deinen Verletzungen würde dein Körper noch ein bis zwei Tage brauchen, aber du siehst gut aus, für das was dir passiert ist."
+Er oeffnet langsam seine Augen."Du bist wach. Haette gedacht bei deinen Verletzungen wuerde dein Koerper noch ein bis zwei Tage brauchen, aber du siehst gut aus, fuer das was dir passiert ist."
 Die Worte nimmst du nur nebenbei weiter, ohne Kontext auf die Aussage des Mannes, fragst du nochmal nach Wasser.
-"Ich bitte um Entschuldigung. Wasser, ja.. warte kurz...Hier nimm ein paar Schlücke, aber nicht zu viel du darfst dein Körper nicht beanspruchen."
-Du nickst und nimmst nur zwei Schlücke Wasser, für das erste ist dein Durst gestillt. 
-Mit einer Stimme, aus welcher man die Schwäche und Verletzlichkeit herraus hören kann, fragst du:"Wo bin ich....? Was ist passiert...? Wer bist...."
-Der Mann unterbricht dich:"Sei leise, du sollst deine Kräfte sparen. Du hast echt gelitten durch die Explosion..."
+"Ich bitte um Entschuldigung. Wasser, ja.. warte kurz...Hier nimm ein paar Schluecke, aber nicht zu viel du darfst dein Koerper nicht beanspruchen."
+Du nickst und nimmst nur zwei Schluecke Wasser, fuer das erste ist dein Durst gestillt. 
+Mit einer Stimme, aus welcher man die Schwaeche und Verletzlichkeit herraus hoeren kann, fragst du:"Wo bin ich...? Was ist passiert...? Wer bist...."
+Der Mann unterbricht dich:"Sei leise, du sollst deine Kraefte sparen. Du hast echt gelitten durch die Explosion..."
 "Welche Explosion?"
-"Das erzähl ich dir alles später. Ich werde versuchen dir jede Frage zubeantworten, aber sei jetzt leise und schlaf noch ein bisschen. ich wache solange über dich."
-Obwohl du bestimmt fast einen ganzen Tag geschlafen hast, merkst du, mit den Worten des alten Mannes, wie müde deine Knochen und Glieder sind.
-Doch jetzt wieder einzuschlafen könnte ein fataler Fehler sein, doch lange kannst du den Wunsch deines Körper, nach der Ruhe, nicht wiederstehen.
-Du schäfst ein seelig und ruhig, doch das unwohle Gefühl in deiner Bauchregion verschwindet nicht.
+"Das erzaehl ich dir alles spaeter. Ich werde versuchen dir jede Frage zubeantworten, aber sei jetzt leise und schlaf noch ein bisschen. ich wache solange ueber dich."
+Obwohl du bestimmt fast einen ganzen Tag geschlafen hast, merkst du, mit den Worten des alten Mannes, wie muede deine Knochen und Glieder sind.
+Doch jetzt wieder einzuschlafen koennte ein fataler Fehler sein, doch lange kannst du den Wunsch deines Koerpers, nach der Ruhe, nicht wiederstehen.
+Du schaefst ein selig und ruhig, doch das unwohle Gefuehl in deiner Bauchregion verschwindet nicht.
 1
-0|Weiter|Story3'2.txt
+0|Weiter|\Story\Story3'2.txt

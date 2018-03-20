@@ -14,4 +14,5 @@ Neben dein Bett steht ein Schrank, gegenueber von diesen ist wieder eine Tuer, w
 Es hallen Laute aus der gerade beschriebenen Tuer. Deine Neugier erwacht, du moechtest Nachschauen, was diese Geraeusche vom klirrenden Metall verursacht.
 Du stehst auf. Deine Fuesse beruehren den Boden, doch sie geben nach, du haelst dich noch schnell an dem Schrank fest. Du richtest dich auf und gehst auf die Tuer zu, immer von der Wand gestuezt.
 Klicke auf weiter....
+1
 0|Weiter|\Story\Story3'2a.txt

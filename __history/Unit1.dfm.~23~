@@ -12,6 +12,7 @@ object Form1: TForm1
   Font.Name = 'Courier'
   Font.Style = []
   OldCreateOrder = False
+  Position = poOwnerFormCenter
   PixelsPerInch = 96
   TextHeight = 20
   object Memo1: TMemo
@@ -24,10 +25,9 @@ object Form1: TForm1
     Font.Height = -20
     Font.Name = 'Courier'
     Font.Style = []
-    Lines.Strings = (
-      '')
     ParentFont = False
     ReadOnly = True
+    ScrollBars = ssVertical
     TabOrder = 0
   end
   object Button1: TButton
@@ -43,6 +43,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    Visible = False
     WordWrap = True
     OnClick = Button1Click
   end
@@ -59,6 +60,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    Visible = False
     WordWrap = True
     OnClick = Button2Click
   end
@@ -75,6 +77,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    Visible = False
     WordWrap = True
     OnClick = Button3Click
   end
@@ -103,6 +106,7 @@ object Form1: TForm1
     Height = 66
     Caption = 'Save'
     TabOrder = 6
+    OnClick = Button6Click
   end
   object Button7: TButton
     Left = 799
@@ -111,6 +115,7 @@ object Form1: TForm1
     Height = 66
     Caption = 'Load'
     TabOrder = 7
+    OnClick = Button7Click
   end
   object Button8: TButton
     Left = 799

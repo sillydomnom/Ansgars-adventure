@@ -7,17 +7,13 @@ uses
   Unit3 in 'Unit3.pas' {Form3},
   Objects in 'Objects.pas',
   save in 'save.pas' {Form4},
-  load in 'load.pas' {Form5},
-  Vcl.Themes,
-  Vcl.Styles;
+  load in 'load.pas' {Form5};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.Title := 'Ansgars Adventure';
-  TStyleManager.TrySetStyle('Windows10 SlateGray');
   Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TForm3, Form3);

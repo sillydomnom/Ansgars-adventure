@@ -1,11 +1,9 @@
 object Form3: TForm3
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
   Caption = 'Stats'
-  ClientHeight = 460
-  ClientWidth = 328
+  ClientHeight = 450
+  ClientWidth = 318
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText

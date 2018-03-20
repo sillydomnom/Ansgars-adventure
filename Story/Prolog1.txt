@@ -28,4 +28,4 @@ Dein kurzes Leben ist vorbei, soweit vom Land entfernt und ohne Schiff in der Na
 Nach mehreren Tagen erscheint am Horizont eine Lichtquelle, ein Schiff, hoffentlich das welches die Toten nach Walhalla, die Erloesung.
 Doch selbst dieser Wunsch bleibt dir verwaehrt, denn dies ist nicht das Ende deiner Leiden, sondern erst der Anfang vom allem....
 1
-2|Weiter|\Story\Prolog2.txt|HP:5
+0|Weiter|\Story\Prolog2.txt

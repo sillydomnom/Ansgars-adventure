@@ -87,7 +87,6 @@ begin
     Form1.setPlayer(player);
     Form1.Enabled := true;
     Form1.StoryClear;
-    ShowMessage('Profil geladen!');
     Form5.Hide
   End;
 end;
@@ -109,7 +108,6 @@ begin
     Form1.setPlayer(player);
     Form1.Enabled := true;
     Form1.StoryClear;
-    ShowMessage('Profil geladen!');
     Form5.Hide
   End;
 end;

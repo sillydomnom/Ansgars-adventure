@@ -24,6 +24,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button8Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
 
   private
     { Private-Deklarationen }
@@ -37,13 +38,17 @@ type
       procedure closeAll();
       procedure StoryAblauf();
       procedure StoryContinue();
+      procedure StoryClear();
       procedure StoryEnd();
+      function getData() : String;
+      procedure setData(setter : String);
+      function getPlayer() : Tplayer;
   end;
   var
   Form1: TForm1;
 
 implementation
-  uses Unit3, Unit2, save;
+  uses Unit3, Unit2, save, load;
 
   var
 
@@ -60,6 +65,21 @@ implementation
 
 {$R *.dfm}
 
+
+procedure TForm1.setData(setter : string);
+Begin
+  data := setter;
+End;
+
+function TForm1.getData;
+begin
+  result := data;
+end;
+
+function TForm1.getPlayer;
+begin
+  result := player;
+end;
 
 procedure TForm1.closeAll();
 Begin
@@ -134,7 +154,16 @@ end;
 
 procedure TForm1.Button6Click(Sender: TObject);
 begin
+  Form4.FormCreate(Form1);
   Form4.Show;
+  Form1.Enabled := false;
+end;
+
+procedure TForm1.Button7Click(Sender: TObject);
+begin
+  Form5.FormCreate(Form1);
+  Form5.Show;
+  Form1.Enabled := false;
 end;
 
 procedure TForm1.Button8Click(Sender: TObject);
@@ -226,18 +255,17 @@ begin
    //nächste Datei einlesen
    dir := GetCurrentDir();
    data := dir + selecs[ButtonSelec -1].getURL;
-   for i := 0 to 2 do
-   Begin
-    if selecs[i] <> nil then
-      selecs[i].free;
-    selecs[i] := nil;
-   End;
-   Memo1.Lines.Clear;
-   StoryAblauf();
+   StoryClear;
   End
   else
     StoryEnd();
 end;
+
+procedure TForm1.StoryClear;
+begin
+
+end;
+
 
 procedure TForm1.StoryEnd;
 var i : integer;

@@ -3,8 +3,8 @@ object Form4: TForm4
   Top = 0
   BorderIcons = []
   Caption = 'Select Save Profile'
-  ClientHeight = 389
-  ClientWidth = 713
+  ClientHeight = 417
+  ClientWidth = 740
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -41,5 +41,14 @@ object Form4: TForm4
     Caption = 'Empty Save Place'
     TabOrder = 2
     OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 632
+    Top = 376
+    Width = 107
+    Height = 33
+    Caption = 'Cancel'
+    TabOrder = 3
+    OnClick = Button4Click
   end
 end

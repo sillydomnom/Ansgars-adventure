@@ -99,12 +99,14 @@ begin
     AssignFile(Save2, filename);
     Reset(Save2);
     Button2.Caption := SaveStats1[0];
+    CloseFile(Save2);
   End;
   3:Begin
     SaveStats1:= Form1.getText(filename);
     AssignFile(Save1, filename);
     Reset(Save3);
     Button1.Caption := SaveStats1[0];
+    CloseFile(Save3);
   End;
   end;
 
@@ -114,14 +116,8 @@ procedure TForm4.Button1Click(Sender: TObject);
 begin
   if not(SaveExist1) then
   Begin
-    DeleteFile(GetCurrentDir() + '\Saves\save1.zrk');
     AssignFile(Save1, GetCurrentDir() + '\Saves\save1.zrk');
-    try
-
       Rewrite(Save1);
-    finally
-      ShowMessage('Datei schon vorhanden?')
-    end;
     fillFile(SaveStats1, false, 1);
   End
     else
@@ -139,11 +135,12 @@ begin
   Begin
     AssignFile(Save2, GetCurrentDir() + '\Saves\save2.zrk');
     Rewrite(Save2);
-    Reset(Save2);
     fillFile(SaveStats2, false, 2);
   End
     else
     Begin
+     DeleteFile(GetCurrentDir() + '\Saves\save2.zrk');
+     AssignFile(Save2, GetCurrentDir() + '\Saves\save2.zrk');
      Rewrite(Save2);
      fillFile(SaveStats2, true, 2);
     End;
@@ -153,13 +150,14 @@ procedure TForm4.Button3Click(Sender: TObject);
 begin
 if not(SaveExist3) then
   Begin
-    AssignFile(Save3, GetCurrentDir() + '\Saves\save1.zrk');
+    AssignFile(Save3, GetCurrentDir() + '\Saves\save3.zrk');
     Rewrite(Save3);
-    Reset(Save3);
     fillFile(SaveStats3, false, 3);
   End
     else
      Begin
+     DeleteFile(GetCurrentDir() + '\Saves\save1.zrk');
+     AssignFile(Save3, GetCurrentDir() + '\Saves\save1.zrk');
      Rewrite(Save3);
      fillFile(SaveStats3, true, 3);
      End;

@@ -13,10 +13,15 @@ type
       procedure addItem(item: String);
       //getters
       function getGold() : integer;
+      procedure setGold(setter : integer);
       function getArmor() : integer;
+      procedure setArmor(setter : integer);
       function getHealth() : integer;
+      procedure setHealth(setter : integer);
       function getStrength() : integer;
+      procedure setStrength(setter : integer);
       function getItems() : tstringlist;
+      procedure setItems(setter : tstringlist);
       function checkForItem(item : String) : boolean;
       //setters
       procedure setEffect(effect : tstringlist);
@@ -107,6 +112,32 @@ begin
 end;
 
 //setters
+
+procedure Tplayer.setGold;
+begin
+  self.gold := setter;
+end;
+
+procedure Tplayer.setArmor(setter: Integer);
+begin
+  self.armor := setter;
+end;
+
+procedure Tplayer.setHealth(setter: Integer);
+begin
+  self.health := setter;
+end;
+
+procedure Tplayer.setStrength(setter: Integer);
+begin
+  self.strength := setter;
+end;
+
+procedure Tplayer.setItems;
+begin
+  self.items := setter;
+end;
+
 procedure Tplayer.setEffect(effect : tstringlist);
 var effects: tstringlist;
     i : integer;

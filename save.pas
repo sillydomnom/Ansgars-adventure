@@ -11,10 +11,12 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -161,6 +163,12 @@ if not(SaveExist3) then
      Rewrite(Save3);
      fillFile(SaveStats3, true, 3);
      End;
+end;
+
+procedure TForm4.Button4Click(Sender: TObject);
+begin
+  Form1.Enabled := true;
+  Form4.Hide;
 end;
 
 procedure TForm4.FormCreate(Sender: TObject);

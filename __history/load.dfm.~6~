@@ -30,7 +30,6 @@ object Form5: TForm5
     Height = 97
     Caption = 'Empty Save Place'
     TabOrder = 1
-    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 48
@@ -39,7 +38,6 @@ object Form5: TForm5
     Height = 97
     Caption = 'Empty Save Place'
     TabOrder = 2
-    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 640

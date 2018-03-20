@@ -1,9 +1,10 @@
-object Form5: TForm5
+object Form4: TForm4
   Left = 0
   Top = 0
-  Caption = 'Select Load  Profile!'
-  ClientHeight = 446
-  ClientWidth = 745
+  BorderIcons = []
+  Caption = 'Select Save Profile'
+  ClientHeight = 389
+  ClientWidth = 713
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,39 +16,30 @@ object Form5: TForm5
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 48
+    Left = 32
     Top = 32
-    Width = 609
-    Height = 97
+    Width = 649
+    Height = 89
     Caption = 'Empty Save Place'
     TabOrder = 0
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 48
-    Top = 160
-    Width = 609
-    Height = 97
+    Left = 32
+    Top = 152
+    Width = 649
+    Height = 89
     Caption = 'Empty Save Place'
     TabOrder = 1
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 48
-    Top = 280
-    Width = 609
-    Height = 97
+    Left = 32
+    Top = 272
+    Width = 649
+    Height = 89
     Caption = 'Empty Save Place'
     TabOrder = 2
     OnClick = Button3Click
-  end
-  object Button4: TButton
-    Left = 640
-    Top = 400
-    Width = 97
-    Height = 38
-    Caption = 'Cancel'
-    TabOrder = 3
-    OnClick = Button4Click
   end
 end

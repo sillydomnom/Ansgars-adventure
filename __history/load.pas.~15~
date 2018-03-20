@@ -84,11 +84,7 @@ begin
     Begin
       items.Append(SaveStats1[7 + i]);
     End;
-    Form1.setPlayer(player);
-    Form1.Enabled := true;
     Form1.StoryClear;
-    ShowMessage('Profil geladen!');
-    Form5.Hide
   End;
 end;
 
@@ -106,11 +102,7 @@ begin
     Begin
       items.Append(SaveStats2[7 + i]);
     End;
-    Form1.setPlayer(player);
-    Form1.Enabled := true;
     Form1.StoryClear;
-    ShowMessage('Profil geladen!');
-    Form5.Hide
   End;
 end;
 
@@ -128,11 +120,7 @@ begin
     Begin
       items.Append(SaveStats3[7 + i]);
     End;
-    Form1.setPlayer(player);
-    Form1.Enabled := true;
     Form1.StoryClear;
-    ShowMessage('Profil geladen!');
-    Form5.Hide
   End;
 end;
 

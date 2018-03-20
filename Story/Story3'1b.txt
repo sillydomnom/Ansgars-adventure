@@ -1,34 +1,31 @@
-31
-Du oeffnest die Tuer. Du stehst in der Kueche, des Hauses. Direkt vor dir steht der Mann an einen Dreifuss und kocht einen Eintopf.
-Der Mann begruesst dich sofort, als du herein gekommen bist mit dem Worten:" Guten Morgen Bursche. Hast du dich endlich ausgeschlafen."
-Du bleibst verwundert im Tuerrahmen stehen. "Wer bist du alter Mann?"
-"Alter Mann, also bitte ich bin gerade erst 63 geworden. Da ist man doch noch nicht alt. Eine Stille durchfaehrt den Raum.
-Bis der Mann sagt: „Komm Bursche, steh da nicht so rum. Du kannst mir auch mal helfen, wenn ich uns schon was zu essen mache. Hol aus der Vorratskammer ein paar Karotten, sowie eine Zwiebel und fuenf Kartoffeln!"
-Er zeigt auf die Tuer direkt gegenueber von dir, hinter dem Dreifuss. Ohne Nachzudenken, oder auch zu wiedersprechen befolgst du diesen Befehl und holst das Gemuese aus der Vorratskammer.
-Mit schleppen Schritten, schreitest du langsam auf die Kammer hinzu. Mit einer Hand stuetzt du dich immer entweder an der Wand oder an der Kuecheneinrichtung ab.
-Die Kueche ist gross, der Dreifuss ist relativ nah an deiner Tuer, hoechstens einen Meter entfernt, doch ungefaehr die doppelte Distanz liegt zwischen den Kochtopf und der Vorratskammer.
-Drei Meter sind es bis zum rechten Ende des Raums, auch dort ist eine Tuer, vermutlich zum Wohnraum oder nach draussen.
-Bis zur Tuer erstreckt sich eine Arbeitszeile, mit allen moeglichen Kuechengeraeten, unterschiedlichen Messern und Kellen. 
-Gegenueber von dieser, auf der gleichen Seite wie die Vorratskammer ist ein Schrank, vermutlich sind dort auch noch Lebensmittel drin.
-Links von dir befindet sich eine fensterlose Wand mit einem Kamin, welcher den ganzen Raum mit Waerme erfuellt.
-Du erreichst die Vorratskammer und holst die Sachen, welche der Mann verlangt hat. Die Vorratskammer muesste genauso lang sein wie die Kueche.
-Du schliesst die Tuer wieder hinter dir und ueberreichst den Mann, stumm, die Kartoffel, Karotten und die Zwiebel. Mit der Schnelligkeit eines Falken schneidet er das Gemuese in kleine Stuecke und schmeisst diese in den Topf.
-Urploetzlich durchstroemt dem Raum ein Duft, welcher dich an deinen Hunger erinnert und deinen Magen zum knurren bringt.
-Der Mann ruehrt mit einem Holzloeffel den Eintopf im Dreifuss. "Setz dich auf den Stuhl. Das Essen muesste in wenigen Minuten fertig sein, es ist kein Mahl fuer ein Koenig, aber es hilft dir wieder auf die Beine zu kommen."
-Er Zeit auf einen kleinen Holzstuhl neben dem Kamin, wohl eher gesagt ein Hocker, denn die Lehne ist schon laengst abgebrochen. Du setzt dich auf den Hocker und wartest.
-Es dauerte nur wenige Minuten, bis der Mann zwei Holzschuesseln mit dem Eintopf fuellt. Er drueckt dir eine Schuessel in die Hand und geht durch die Tuer, welche gegenueber dem Kamin liegt.
-Du musst dich noch immer an der Wand abstuetzen, doch der Mann nimmt keine Ruecksicht auf dich. Er spurt dich an schneller zu laufen, sonst wuerde das Essen kalt werden, bis du am Tisch sitzt.
-Obwohl der Weg durch die Kueche nur wenige Meter lang ist, kommt es fuer dich wie eine Ewigkeit vor bis du die Tuer erreichst hast.
-Hinter der Tuer erstreckt sich ein grosser Raum, vermutlich ist er genauso gross, wie die Kueche, die Vorratskammer und das Zimmer, in welches du aufgewacht bist zusammen.
-An der Wand, welche dir gegenueber ist erstreckt sich, ueber die ganze Raumlaenge, ein Regal, welches mit allerlei Buechern gefuellt ist. Bis zur Decke ist das Regal mit Buechern gefuellt.
-Links von dir befindet sich ein kleiner Tisch mit Stuhl, unter einen Fenster. Auf dem Tisch liegen auch Buecher, aber groessere und ein paar sind sogar aufgeschlagen.
-Neben dem kleinen Tisch ist eine weitere Tuer und nebenan noch ein weiteres Fenster, die Tuer scheint nach Draussen zu fuehren, oder mindestens in den Garten des Hauses.
-Leicht rechts von dir ist ein groesserer Tisch, an welchen sechs Stuehle stehen, ein Stuhl zu dir gewandt, ein anderer zum Buecherregal, die naechsten Zwei sind zum rechten Teil des Raumes gewandt, im welchen ein provisorisches Bett steht.
-Die letzten beiden Stuehle sind zu der Tuer gewandt, welche nach draussen fuehrt.
-Der Mann sitzt auf den Stuhl direkt vor dem Regal, vor ihm die Schuessel und ein Holzloeffel. Gegenueber vom Mann ist der Platz fuer dich eingerichtet, mit Blick auf die Wand voller Buecher.
-"Setz dich, Bursche und iss was. Der erste Schritt um gesund zu werden, ist eine warme Mahlzeit." Du setzt dich auf den Stuhl.
-Sobald du dich hingesetzt hast, beginnt der Mann mit dem Essen, du tust ihn gleich und faengst auch an.
-Das weitere Essen verfolgt ruhig, man hoert nur die Essgeraeusche, welche ihr beide verursacht.
-Klicke auf Weiter...
+28
+Du legst den Löffel auf den Tisch. Der Eintopf hat dir gut getan, ein warmes Gefühl herrscht nun in deiner Magenregion. 
+Der Mann ist immernoch beim Essen, währenddessen schaust du dir weiter das Bücherregal an. Es sind aber hunderte von Büchern, Große und Kleine, Dicke und Dünne, mit den unterschiedlichsten Einschlägen.
+Es vergehen Minuten, bis der Mann seine Schlüssel leer gegessen hat. Dann began er zureden.
+"Junge erzähl wie bist du hierher gekommen?"
+Deine Augen werden groß, du schaust auf deine Hände und fängst an zu erzählen, von deinem Dorf und dem harten Winter, von der Mission, auf die dich König Knut der Große geschickt hat.
+Du erzählst ihn von deiner Krankheit und dem Aufenthalt in den angel-sächsischen Provinzen, von deiner Genesung und der Weiterfahrt.
+"Was passierte dann Junge, wie bist du zu mir gelangt?"
+Du erzählst weiter von dem Jahrtausendsturm und den Männer die dich entführt hatten.
+"Wer waren diese Männer?"
+"Ich weiß es nicht. Ich verstand ihre Sprache nicht, sie klang der Meiner ähnlich, aber doch fremd."
+"Hmmmm.... eine Sprache die so ähnlich wie der Deine ist, es muss also ein germanisches Volk gewesen sein. Es kommen also nur die Friesen und die Sachsen in Frage, denn diese haben oft ihre Schiffe in den Gewässern vor England.
+Alles Feinde deines Königs. Was willst du jetzt machen Bursche?"
+"Meine Aufgabe ist es jetzt nach Hause zurück zu kehren und meinen König Bericht zu erstatten."
+Im gleichen Augenblick, als du deine lezten Worte ausgesprochen hast, steht der Mann auf und greift nach einen großen Buch direkt hinter sich.
+Er öffnet das staubbdeckte Buch. Es ist ein Atlas voller Karten aus der ganzen Welt. Er schlägt eine Karte auf, auf welcher das Königreich von Knut und umliegende Länder abgebildet sind.
+"Hier her Bursche dort liegt unegfähr dein Dorf", er zeigt auf die Meerenge zwischen den Nordmännern und den Germanen,"stimmt das?" Du nickst. 
+"Und hier befinden wir uns", er zeigt auf den westlichsten Punkt auf der Karte,"diese Region ist unter dem Namen Bretange bekannt. Wenn du nach Haus willst musst du entweder übers Land oder du fährst mit einen Schiff.
+Da das Land, welchen du durchqueren müsstest, den Feinden des Königs gehört und die dich sofort töten würden. Aber mit einen Schiff kannst du auch nicht, da du bestimmt wieder seekrankst wirst.
+Aber keine Angst ich kenne eine weitere Route."
+"Dann erzähl mir, wie diese Route lautet."
+"Nicht so eilig Bursche, bevor ich dir mein Geheimnis verrate musst du mir einen Gefallen tun."
+"Was ist das für ein Gefallen?"
+"Dies wirst du später erfahren, du musst mir erst sagen, ob du mir hilfst. Danach werde ich mich um alles kümmern."
+"Ich habe keine andere Wahl, ich werde dir einen Gefallen erfüllen egal was es ist, aber dafür bringst du mich nach Hause."
+"Ja, das werde ich tun. Aber bevor ich dir alles erzähle, musst du dich schlafen legen, du bist noch nicht gesund. Wenn du wach bist hole ich einen guten Arzt, der wird dir besser helfen können als ich."
+Du befolgst die Anweisungen des Mannes und begibst dich zurück in das Zimmer, um dich schlafen zu legen.
+Der Mann flüsterst dir hinterher, leise, aber dennoch laut genung, damit du es verstehen kannst: "Es ist gut, dass du gekommen bist Ansgar. 
+Es wartet ein großes Abenteuer auf dich, hoffentlich überlebt du dies und kannst heil nach Hause zurück. Außerdem müssen wir noch mal über deine Flucht reden Ansgar."
 1
 0|Weiter|\Story\Story3'1c.txt

@@ -32,7 +32,7 @@ implementation
 uses Unit1;
 
 {$R *.dfm}
-
+                                                                      //Stats updaten!
 procedure TForm3.onUpdate(player: Tplayer);
 var items : tstringlist;
     i : integer;
@@ -42,7 +42,6 @@ begin
   Label7.Caption := 'Rüstung: ' + inttostr(player.getArmor) + '/100';
   Label8.Caption := 'Stärke: ' + inttostr(player.getStrength);
   items := player.getItems;
-  //writeln(items[0]);
   if items.Count > 0 then
   Begin
     for i := 0 to items.Count -1 do

@@ -42,7 +42,7 @@ implementation
 
 uses Unit1, Objects;
 
-procedure TForm5.initializeButton(Button: Integer; filename : String);
+procedure TForm5.initializeButton(Button: Integer; filename : String);      //Knöpfe werden initialisiert (s. save.pas)
 begin
   case Button of
   1:Begin
@@ -70,28 +70,29 @@ begin
 
 end;
 
-procedure TForm5.Button1Click(Sender: TObject);
+procedure TForm5.Button1Click(Sender: TObject);                 //Save 1
 var player : Tplayer;
     items : TStringList;
     i : integer;
 begin
-  if(SaveExist1) then
+  if(SaveExist1) then                                           //wenn dieser Save existiert
   Begin
     items := TStringList.Create;
-    Form1.setData(SaveStats1[1]);
-    player := Tplayer.create(strtoint(SaveStats1[2]), strtoint(SaveStats1[3]), strtoint(SaveStats1[4]), strtoint(SaveStats1[5]));
-    for i := 0 to strtoint(SaveStats1[6]) do
-    Begin
-      items.Append(SaveStats1[7 + i]);
-    End;
-    Form1.setPlayer(player);
+    Form1.setData(SaveStats1[1]);                              //URL wird in Hauptroutine auf gespeicherte URL gesetzt
+    player := Tplayer.create(strtoint(SaveStats1[2]), strtoint(SaveStats1[3]), strtoint(SaveStats1[4]), strtoint(SaveStats1[5]));   // neuer Player wird erstelt
+    if StrToInt(SaveStats1[6]) <> 0 then
+      for i := 0 to strtoint(SaveStats1[6]) do
+      Begin
+        items.Append(SaveStats1[7 + i]);                       // items werden dem neuem player hinzugefügt
+      End;
+    Form1.setPlayer(player);                                   //player zur Hauptroutine hinzugefügt
     Form1.Enabled := true;
     Form1.StoryClear;
     ShowMessage('Profil geladen!');
     Form5.Hide
   End;
 end;
-
+                                                              //Save 2
 procedure TForm5.Button2Click(Sender: TObject);
 var player : Tplayer;
     items : TStringList;
@@ -114,7 +115,7 @@ begin
   End;
 end;
 
-procedure TForm5.Button3Click(Sender: TObject);
+procedure TForm5.Button3Click(Sender: TObject);       //Save 3
 var player : Tplayer;
     items : TStringList;
     i : integer;
@@ -136,12 +137,12 @@ begin
   End;
 end;
 
-procedure TForm5.Button4Click(Sender: TObject);
+procedure TForm5.Button4Click(Sender: TObject);        // Cancel
 begin
   Form1.Enabled := true;
   Form5.Hide;
 end;
-
+                                                      // bei jedem Start ded Fensters wird das ausgeführt (s. save.pas)
 procedure TForm5.FormCreate(Sender: TObject);
 begin
   SaveStats1 := tstringlist.create;

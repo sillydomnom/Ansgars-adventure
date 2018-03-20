@@ -43,17 +43,23 @@ implementation
 
 uses Unit1, Objects;
 
-procedure TForm4.fillFile(list : tstringlist; existing : boolean; save : integer);
+procedure TForm4.fillFile(list : tstringlist; existing : boolean; save : integer);      //Datei schreiben
 var player : Tplayer;
   i: Integer;
   l: Integer;
-  test : string;
+  profil : string;
 Begin
   player := Form1.getPlayer;
   if not(existing) then
   Begin
-    list := list.Create;
-    list.Append(InputBox('Profil Name eingeben!', 'Geben Sie Ihrem Profil einen Namen!', 'Ansgar'));
+    list := list.Create;     // Datei inhalt wird in Liste geschrieben und Liste dann in Datei
+    list.Append(InputBox('Profil Name eingeben!', 'Geben Sie Ihrem Profil einen Namen!', 'Ansgar')); //Profil Name abfragen
+  End
+  else
+  Begin
+    profil := list[0];
+    list.Clear;
+    list.append(profil)
   End;
     list.append(Form1.getData());
     list.append(inttostr(player.getGold));
@@ -67,15 +73,14 @@ Begin
     End;
   for l := 0 to list.Count - 1 do
   Begin
-    test := list[l];
     case save of
-    1: WriteLn(Save1, list[l]);
+    1: WriteLn(Save1, list[l]);      // in Datei wird geschrieben
     2: WriteLn(Save2, list[l]);
     3: WriteLn(Save3, list[l]);
     end;
   End;
   case save of
-  1: CloseFile(Save1);
+  1: CloseFile(Save1);               // Datei wird geschlossen
   2: CloseFile(Save2);
   3: CloseFile(Save3);
   end;
@@ -83,18 +88,18 @@ Begin
   SaveStats2.free;
   SaveStats3.free;
   Form1.Enabled := true;
-  Form4.Hide;
+  Form4.Hide;                        // Fenster geschlossen
 End;
 
-procedure TForm4.initializeButton(Button: Integer; filename : String);
+procedure TForm4.initializeButton(Button: Integer; filename : String);      // Knöpfe werden initialisiert
 begin
   case Button of
   1:Begin
-    SaveStats1:= Form1.getText(filename);
-    AssignFile(Save1, filename);
-    Reset(Save1);
-    Button1.Caption := SaveStats1[0];
-    CloseFile(Save1);
+    SaveStats1:= Form1.getText(filename);    //Datei wird in stringlist gescrieben
+    AssignFile(Save1, filename);             // zugewiesen
+    Reset(Save1);                            //zum lesen verfügbar gemacht
+    Button1.Caption := SaveStats1[0];        //Profil Name wird gelesen und auf den Knopf geschrieben
+    CloseFile(Save1);                        // Datei wird geschlossen
   End;
   2:Begin
     SaveStats2:= Form1.getText(filename);
@@ -114,24 +119,24 @@ begin
 
 end;
 
-procedure TForm4.Button1Click(Sender: TObject);
+procedure TForm4.Button1Click(Sender: TObject);        //Save 1
 begin
-  if not(SaveExist1) then
+  if not(SaveExist1) then                              // Wenn datei nicht vorhanden
   Begin
-    AssignFile(Save1, GetCurrentDir() + '\Saves\save1.zrk');
-      Rewrite(Save1);
-    fillFile(SaveStats1, false, 1);
+    AssignFile(Save1, GetCurrentDir() + '\Saves\save1.zrk');    // Datei zuweisen abhängig von relativer Position
+      Rewrite(Save1);                                           // Datei neu erstellen
+    fillFile(SaveStats1, false, 1);                             // Datei beschreiben
   End
     else
-    Begin
-     DeleteFile(GetCurrentDir() + '\Saves\save1.zrk');
-     AssignFile(Save1, GetCurrentDir() + '\Saves\save1.zrk');
-     Rewrite(Save1);
-     fillFile(SaveStats1, true, 1);
+    Begin                                                      // falls schon vorhanden
+     DeleteFile(GetCurrentDir() + '\Saves\save1.zrk');         // wird gelöscht
+     AssignFile(Save1, GetCurrentDir() + '\Saves\save1.zrk');  // neu zugewiesen
+     Rewrite(Save1);                                           // neu erstellt
+     fillFile(SaveStats1, true, 1);                            // und wieder beschrieben
     End;
 end;
 
-procedure TForm4.Button2Click(Sender: TObject);
+procedure TForm4.Button2Click(Sender: TObject);       //Save 2
 begin
   if not(SaveExist2) then
   Begin
@@ -148,7 +153,7 @@ begin
     End;
 end;
 
-procedure TForm4.Button3Click(Sender: TObject);
+procedure TForm4.Button3Click(Sender: TObject);     // Save 3
 begin
 if not(SaveExist3) then
   Begin
@@ -165,23 +170,23 @@ if not(SaveExist3) then
      End;
 end;
 
-procedure TForm4.Button4Click(Sender: TObject);
+procedure TForm4.Button4Click(Sender: TObject);    //Cancel
 begin
   Form1.Enabled := true;
   Form4.Hide;
 end;
 
-procedure TForm4.FormCreate(Sender: TObject);
+procedure TForm4.FormCreate(Sender: TObject);     // bei jedem öffnem und beim ersten Start
 begin
   SaveStats1 := tstringlist.create;
   SaveStats2 := tstringlist.create;
   SaveStats3 := tstringlist.create;
-  if FileExists(GetCurrentDir() + '\Saves\save1.zrk') then
+  if FileExists(GetCurrentDir() + '\Saves\save1.zrk') then      // wenn existiert
   Begin
-    initializeButton(1, GetCurrentDir() + '\Saves\save1.zrk');
-    SaveExist1 := true;
+    initializeButton(1, GetCurrentDir() + '\Saves\save1.zrk');  //initialisiert
+    SaveExist1 := true;                                         // und booelean auf wahr
   End
-  else SaveExist1 := false;
+  else SaveExist1 := false;                                     // sonst auf falsch
 
   if FileExists(GetCurrentDir() + '\Saves\save2.zrk') then
   Begin

@@ -38,9 +38,12 @@ type
       procedure closeAll();
       procedure StoryAblauf();
       procedure StoryContinue();
+      procedure StoryClear();
       procedure StoryEnd();
       function getData() : String;
+      procedure setData(setter : String);
       function getPlayer() : Tplayer;
+      procedure setPlayer(setter : Tplayer);
   end;
   var
   Form1: TForm1;
@@ -63,6 +66,16 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm1.setPlayer(setter : Tplayer);
+begin
+  player := setter;
+  Form3.onUpdate(player);
+end;
+
+procedure TForm1.setData(setter : string);
+Begin
+  data := setter;
+End;
 
 function TForm1.getData;
 begin
@@ -237,7 +250,6 @@ End;
 
 procedure TForm1.StoryContinue;
 var URL : String;
-  i : Integer;
 begin
   if (selecs[ButtonSelec -1].getState = 2) or (selecs[ButtonSelec -1].getState = 3) THEN
     player.setEffect(selecs[ButtonSelec -1].getEffect);
@@ -248,7 +260,16 @@ begin
    //nächste Datei einlesen
    dir := GetCurrentDir();
    data := dir + selecs[ButtonSelec -1].getURL;
-   for i := 0 to 2 do
+   StoryClear;
+  End
+  else
+    StoryEnd();
+end;
+
+procedure TForm1.StoryClear;
+var i : integer;
+begin
+  for i := 0 to 2 do
    Begin
     if selecs[i] <> nil then
       selecs[i].free;
@@ -256,10 +277,8 @@ begin
    End;
    Memo1.Lines.Clear;
    StoryAblauf();
-  End
-  else
-    StoryEnd();
 end;
+
 
 procedure TForm1.StoryEnd;
 var i : integer;

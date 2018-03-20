@@ -73,18 +73,23 @@ end;
 procedure TForm5.Button1Click(Sender: TObject);
 var player : Tplayer;
     items : TStringList;
-    i : integr;
+    i : integer;
 begin
   if(SaveExist1) then
   Begin
     items := TStringList.Create;
     Form1.setData(SaveStats1[1]);
     player := Tplayer.create(strtoint(SaveStats1[2]), strtoint(SaveStats1[3]), strtoint(SaveStats1[4]), strtoint(SaveStats1[5]));
-    for i := 0 to strtoint(SaveStats1[6]) do
-    Begin
-      items.Append(SaveStats1[7 + i]);
-    End;
+    if StrToInt(SaveStats1[6]) <> 0 then
+      for i := 0 to strtoint(SaveStats1[6]) do
+      Begin
+        items.Append(SaveStats1[7 + i]);
+      End;
+    Form1.setPlayer(player);
+    Form1.Enabled := true;
     Form1.StoryClear;
+    ShowMessage('Profil geladen!');
+    Form5.Hide
   End;
 end;
 
@@ -102,7 +107,33 @@ begin
     Begin
       items.Append(SaveStats2[7 + i]);
     End;
+    Form1.setPlayer(player);
+    Form1.Enabled := true;
     Form1.StoryClear;
+    ShowMessage('Profil geladen!');
+    Form5.Hide
+  End;
+end;
+
+procedure TForm5.Button3Click(Sender: TObject);
+var player : Tplayer;
+    items : TStringList;
+    i : integer;
+begin
+  if(SaveExist3) then
+  Begin
+    items := TStringList.Create;
+    Form1.setData(SaveStats3[1]);
+    player := Tplayer.create(strtoint(SaveStats3[2]), strtoint(SaveStats3[3]), strtoint(SaveStats3[4]), strtoint(SaveStats3[5]));
+    for i := 0 to strtoint(SaveStats3[6]) do
+    Begin
+      items.Append(SaveStats3[7 + i]);
+    End;
+    Form1.setPlayer(player);
+    Form1.Enabled := true;
+    Form1.StoryClear;
+    ShowMessage('Profil geladen!');
+    Form5.Hide
   End;
 end;
 

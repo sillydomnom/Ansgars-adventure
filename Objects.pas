@@ -3,7 +3,7 @@ unit Objects;
 interface
 uses Classes, SysUtils, StrUtils;
 type
-  Tplayer = class
+  Tplayer = class         //Player Objekt
      private
       gold, armor, health, strength : integer;
       items: TStringList;
@@ -11,7 +11,7 @@ type
       constructor create(gold, armor, health, strength : integer);
       destructor free();
       procedure addItem(item: String);
-      //getters
+      //Object getting and setting
       function getGold() : integer;
       procedure setGold(setter : integer);
       function getArmor() : integer;
@@ -23,10 +23,10 @@ type
       function getItems() : tstringlist;
       procedure setItems(setter : tstringlist);
       function checkForItem(item : String) : boolean;
-      //setters
+      //Effect Ausübung von der ausgewälten Selection
       procedure setEffect(effect : tstringlist);
   end;
-  selec = class
+  selec = class          //Selection Object
     private
       state : integer;
       text, URL : String;
@@ -45,8 +45,8 @@ type
 implementation
 
 uses Unit1, Unit3;
-
-constructor Tplayer.create(gold, armor, health, strength : integer);
+      {player}
+constructor Tplayer.create(gold, armor, health, strength : integer);  //constructor
 begin
    self.items := Tstringlist.Create;
    self.gold := gold;
@@ -55,17 +55,17 @@ begin
    self.strength := strength;
 end;
 
-destructor Tplayer.free();
+destructor Tplayer.free();                                            //destructor
 Begin
   items.free;
 End;
 
-procedure Tplayer.addItem(item: string);
+procedure Tplayer.addItem(item: string);                              //items hinzufügen
 begin
   self.items.Add(item);
 end;
 
-function Tplayer.checkForItem(item : String) : boolean;
+function Tplayer.checkForItem(item : String) : boolean;               //items testen
 var i : integer;
 Begin
  result:= false;
@@ -85,7 +85,7 @@ Begin
  End;
 
 End;
-
+//getters
 function Tplayer.getGold() : integer;
 begin
   result := self.gold;
@@ -138,24 +138,23 @@ begin
   self.items := setter;
 end;
 
+      //Effect Ausübung von der ausgewälten Selection
 procedure Tplayer.setEffect(effect : tstringlist);
 var effects: tstringlist;
     i : integer;
     s, s1 : String;
   l: Integer;
 Begin
- s1 := effect[0];
+  //stringlist um eine Erweiterung um mehrere Effekte evtl. hinzuzufügen
  effects := tstringlist.Create;
- Unit1.Form1.split(':',effect[0],effects);
+ Unit1.Form1.split(':',effect[0],effects);   //gesplittet um die Variable und die Zahl zu isolieren
 
- for l := 0 to effects.Count - 1 do
-    s1 := effects[l];
-
+ //case abhängig von der Variable bei 'Gold' ist der case 0 bei 'Armor' 1 usw.
  case IndexStr(effects[0],['Gold', 'Armor', 'HP', 'Strength','Item']) of
  0:
  Begin
    i := strtoint(effects[1]);
-   self.gold := self.gold + i;
+   self.gold := self.gold + i;                 //hinzufügen der Variable zum eigenen Wert
    if i > 0 then
       Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Gold erhalten!')
    else
@@ -199,23 +198,22 @@ Begin
    Unit1.Form1.Memo1.Lines.Append('');
  End;
  end;
- Form3.onUpdate(self);
+ Form3.onUpdate(self); //Stats Fenseter updaten
 End;
 
-//selection
-constructor selec.create(line: string);
+      {selection}
+constructor selec.create(line: string);  //Selection wird gebildet abhängig von diesem String
 begin
-  self.state := 1;
   self.subs := tstringlist.create;
   self.effects := TStringList.Create;
   self.conditions := TStringList.Create;
-  Unit1.Form1.split('|',line,self.subs);
+  Unit1.Form1.split('|',line,self.subs);  //line wird gesplittet an den Charachtern '|' (eigener Parameter)
   self.state := strtoint(self.subs[0]);
   self.text := self.subs[1];
   self.URL := self.subs[2];
-  case self.state of
-    1: Unit1.Form1.split(';',self.subs[3],self.conditions);
-    2: Unit1.Form1.split(';', Self.subs[3], self.effects);
+  case self.state of     // state beschreibt die Art der Selection: 0 wäre bspw. keine Condition o.ä.
+    1: Unit1.Form1.split(';',self.subs[3],self.conditions);   //Hier auch wieder: Möglichkeit zum erweitern um mehrere
+    2: Unit1.Form1.split(';', Self.subs[3], self.effects);    //Conditions oder Effects
     3:Begin
     Unit1.Form1.split(';',self.subs[3],self.conditions);
     Unit1.Form1.split(';', Self.subs[4], self.effects);
@@ -223,15 +221,14 @@ begin
   end;
 end;
 
-//getters
-function selec.checkForCondition(player: Tplayer) : String;
-var subs : Tstringlist;
-  con : String;
+function selec.checkForCondition(player: Tplayer) : String;         // Prüfung ob die Selection auch beim player vorhanden
+var subs : Tstringlist;                                             // wenn nicht result = 10 Gold o.ä für die Ausgabe
+  con : String;                                                     // du benötigst 10 Gold oder so
   con2: Integer;
   abfrage : String;
 begin
   subs := Tstringlist.Create;
-  if (self.state = 1) or (self.state = 3) then
+  if (self.state = 1) or (self.state = 3) then                      // Conditions nur vorhanden bei 1 o. 3
     Begin
       result := '';
       Form1.split(':',self.conditions[0], subs);
@@ -275,6 +272,7 @@ begin
     subs.Free;
 end;
 
+//getters
 function selec.getState;
 begin
   result := self.state;

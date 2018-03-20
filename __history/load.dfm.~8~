@@ -1,7 +1,6 @@
 object Form5: TForm5
   Left = 0
   Top = 0
-  BorderIcons = []
   Caption = 'Select Load  Profile!'
   ClientHeight = 446
   ClientWidth = 745

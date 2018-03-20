@@ -1,0 +1,4 @@
+Während du dich auf den Rückweg bewegen wolltest. Fällst du plötzlich in Ohnmacht 
+Alles um dich herrum wird Schwarz und als du auf dem Boden lagst wurdest du ohnmächtig.
+Du bemerkst nur noch wie jemand versucht dich an einen anderen Ort zu ziehen. Doch alles andere verschwimmt
+2|Weiter|\Story\Story2.txt|HP:10

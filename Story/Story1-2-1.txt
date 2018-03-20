@@ -1,0 +1,9 @@
+4
+Der Wirt begrüßt dich aufmunternd und fragt wo du herkommst. Du antwortest nur mit einem nichts anemerkbarem "Weit weg" damit nicht zu viel gefragt wird.
+Der Barkeeper sieht so aus als ob er dir was erzählen möchte.
+Und weiter hinten befindet sich ein Spieltisch. 
+Möchtest du spielen?
+3
+1|Den Barkeeper fragen|\Story\Story1-2-1-1.txt|Item:Zugnirs Klinge
+2|Ein bisschen spielen|\Story\Story1-2-1-2.txt|Gold:-5
+0|Zurückkehren|\Story\zwischen1-1.txt

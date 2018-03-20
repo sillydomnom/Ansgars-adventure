@@ -170,7 +170,6 @@ procedure TForm1.Button8Click(Sender: TObject);        //New Game
 begin
   player := Tplayer.create(0, 0, 30, 10);
   Memo1.Lines.Clear;
-  //player.addItem('Start Item');
   Form3.onUpdate(player);
   data:= GetCurrentDir() + '\Story\Prolog1.txt';
   StoryAblauf();
@@ -240,12 +239,13 @@ End;
 
 procedure TForm1.StoryContinue;
 var URL : String;
+    ending : boolean;
 begin
   if (selecs[ButtonSelec -1].getState = 2) or (selecs[ButtonSelec -1].getState = 3) THEN  //wenn ein Effekt vorhanden ist (einteilung in States bei Selections)
-    player.setEffect(selecs[ButtonSelec -1].getEffect);   // wird dieser Ausgeübt
+    ending := player.setEffect(selecs[ButtonSelec -1].getEffect);   // wird dieser Ausgeübt
   //wenn die nächste URL leer ist dann aufhören
   URL := selecs[ButtonSelec - 1].getURL;                  //neue URL prüfen
-  if  URL <> '' then
+  if  (URL <> '') and (ending)then
   Begin
    //nächste Datei einlesen
    dir := GetCurrentDir();
@@ -269,16 +269,24 @@ begin
    StoryAblauf();                                        //Neuer Beginn der Initialisierungs routine
 end;
 
-
+//Falls keine nächste Datei mehr angegeben ist
 procedure TForm1.StoryEnd;
-var i : integer;
+var i,l : integer;
 begin
-  Memo1.Lines.Append('Danke fürs spielen!');
 
-  //reset
+  ShowMessage('Das Spiel ist in dieser Fassung des Spiels (v1.1) an dieser Stelle vorbei!' + #10#13 + 'Wir danken fürs spielen!' + #10#13 + 'Wir hoffen es hat euch gefallen!' + #10#13 + 'Euer Team von Ansgars Adventure :)');
+  //Alles zurücksetzen
   player.free;
   for i := 0 to 2 do
-    selecs[i].free;
+    if selecs[i] <> nil then
+      selecs[i].free;
+  Memo1.Lines.Clear;
+  for l := 0 to 10 do
+    Memo1.Lines.Append('');
+  Memo1.Lines.Append('                      Danke fürs spielen!');
+
+
+
 
 
 end;

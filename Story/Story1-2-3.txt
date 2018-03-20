@@ -1,0 +1,6 @@
+2
+Möchtest du episch gegen große Gladiatoren kämpfen in einer winzigen Arena ? Dann nur hier im Epic battle!
+Klingt verlockend und ein Gewinn Preis ist auch angesetzt!
+2
+2|Kämpfen|\Story\zwischen1-2-3.txt|HP:-5
+0|Zurückkehren|\Story\zwischen1-2.txt

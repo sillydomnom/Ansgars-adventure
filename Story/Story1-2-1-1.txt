@@ -1,0 +1,8 @@
+5
+Oh wie ich seh hast du meine Klinge!
+Schön zu sehen, dass sie in guten Händen ist. Anscheinend hast du viele Gladiatoren bezwungen um das zu bekommen!
+Ich hab gehört unten am Fuße des Berges soll etwas pasiert sein an deiner Stelle würde ich da mal vorbei schauen!
+Ansgar verschwieg das er da unten beteiligt war um es nicht zu einer komplizierten Situation kommen zu lassen.
+Hier hast du was das wird dir auf deinem Weg helfen!
+1
+2|Zurückkehren|\Story\zwischen1.txt|Gold:30

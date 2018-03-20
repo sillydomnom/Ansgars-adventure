@@ -35,7 +35,6 @@ type
       procedure split(Del : Char; Str: String; list : tstringlist);
       function checkCondition() : Boolean;
       function getText(filename: String): tstringlist;
-      procedure closeAll();
       procedure StoryAblauf();
       procedure StoryContinue();
       procedure StoryClear();
@@ -65,7 +64,7 @@ implementation
 
 
 {$R *.dfm}
-
+// Spieler setzen + im Stats Fenster updaten
 procedure TForm1.setPlayer(setter : Tplayer);
 begin
   player := setter;
@@ -86,14 +85,7 @@ function TForm1.getPlayer;
 begin
   result := player;
 end;
-
-procedure TForm1.closeAll();
-Begin
-  Form3.Close;
-  Form2.Close;
-  Form1.Close;
-End;
-
+// Nachdem ein Selection Button gedrückt wird: Prüfung ob man die nötigen Vorraussetzungen dafür hat
 function TForm1.checkCondition() : Boolean;
 var con : string;
 begin
@@ -108,6 +100,7 @@ begin
     StoryContinue();
 end;
 
+//Dateien können hiermit in Stringlists umgewandelt werden
 function TForm1.getText(filename : String) : tstringlist;
 begin
   result := TStringList.Create;
@@ -118,7 +111,8 @@ begin
   end;
 
 end;
-
+// Hiermit kann ein String in Abhängigkeit von einem Parameter in mehrere Substrings geteilt werden damit
+// man die Selections auslesen kann
 procedure TForm1.split(Del : Char; Str: String;list : tstringlist );
 Begin
     list.clear;
@@ -126,31 +120,31 @@ Begin
     list.StrictDelimiter := True; // Requires D2006 or newer.
     list.DelimitedText   := Str;
 End;
-
-procedure TForm1.Button1Click(Sender: TObject);
+// jeder Button setzt eine Variable und prüft dann die Conditions dafür
+procedure TForm1.Button1Click(Sender: TObject);           //Mgl1
 begin
   ButtonSelec := 1;
   checkCondition();
 end;
-
+                                                          //Mgl2
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   ButtonSelec := 2;
   checkCondition();
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TForm1.Button3Click(Sender: TObject);           //Mgl3
 begin
   ButtonSelec := 3;
   checkCondition();
 end;
 
-procedure TForm1.Button4Click(Sender: TObject);
+procedure TForm1.Button4Click(Sender: TObject);      // Stats
 begin
   Form3.Show;
 end;
 
-procedure TForm1.Button5Click(Sender: TObject);
+procedure TForm1.Button5Click(Sender: TObject);      // Menu
 begin
   //dlg:=TForm2.Create(self);
   //dlg.Show;
@@ -158,31 +152,30 @@ begin
   Form2.Show;
 end;
 
-procedure TForm1.Button6Click(Sender: TObject);
+procedure TForm1.Button6Click(Sender: TObject);       //Save Dialog
 begin
   Form4.FormCreate(Form1);
   Form4.Show;
   Form1.Enabled := false;
 end;
 
-procedure TForm1.Button7Click(Sender: TObject);
+procedure TForm1.Button7Click(Sender: TObject);       //Load Dialog
 begin
   Form5.FormCreate(Form1);
   Form5.Show;
   Form1.Enabled := false;
 end;
 
-procedure TForm1.Button8Click(Sender: TObject);
+procedure TForm1.Button8Click(Sender: TObject);        //New Game
 begin
   player := Tplayer.create(0, 0, 30, 10);
   Memo1.Lines.Clear;
-  //player.addItem('Start Item');
   Form3.onUpdate(player);
   data:= GetCurrentDir() + '\Story\Prolog1.txt';
   StoryAblauf();
 
 end;
-
+//Die initialisierungsroutine für jede Story Datei
 procedure TForm1.StoryAblauf();
 var subs: tstringlist;
   lauf : String;
@@ -192,7 +185,7 @@ var l , i : Integer;
   test2:Integer;
 Begin
     subs := getText(data);
-    Memo1.Lines.BeginUpdate;
+    Memo1.Lines.BeginUpdate;    //Kein Verrutschen der Zeilen beim hinzufügen von Lines im Memo
     try
       for j := 1 to strtoint(subs[0]) do
         Begin
@@ -200,26 +193,21 @@ Begin
         Memo1.Lines.Append('');
         End;
     finally
-      Memo1.Lines.EndUpdate;
+      Memo1.Lines.EndUpdate;    //Das Ende von dem nicht verrutschen Befehl
     end;
-   // for i := strtoint(subs[0]) + 2 to strtoint(subs[0])+2 + strtoint(subs[strtoint(subs[0])+1])  do
-    //Begin
-
-    //End;
   i := 0;
-  //Selections erstellen
-  for l := 0 to strtoint(subs[strtoint(subs[0])+1])-1 do
+  for l := 0 to strtoint(subs[strtoint(subs[0])+1])-1 do  //strtoint(subs[strtoint(subs[0])+1])-1 = die Anzahl der Buttons die vorhanden sind
   Begin
     test1:= strtoint(subs[strtoint(subs[0])+1]);
     test2 := strtoint(subs[0])+ 2 +l + i;
     lauf:= subs[test2];
-    if lauf <> '' then
-      selecs[l] := selec.create(lauf)
+    if lauf <> '' then                        //lediglich eine Routine zur Sicherstellung falls leere Zeilen vorhanden sind
+      selecs[l] := selec.create(lauf)         //erstellen eines Objekts mit dem Parameter lauf (weitere Initialisierung in Objects.pas automatisch)
     else
       i := i +1;
   End;
 
-    case strtoint(subs[strtoint(subs[0])+1]) of
+    case strtoint(subs[strtoint(subs[0])+1]) of      //Jenachdem wie viele Buttons vorhanden sind werden diese ein-/ausgeschalten und mit Text versehen
       1:Begin
           Button1.Visible := true;
           Button2.Visible := false;
@@ -244,22 +232,23 @@ Begin
     end;
   //Alle Auswahlen durchgehen
   subs.free;
-  //Auf Button warten
+
+  //An der Stelle wird darauf gewartet, dass eine Button Eingabe getätigt wird
 
 End;
 
 procedure TForm1.StoryContinue;
 var URL : String;
 begin
-  if (selecs[ButtonSelec -1].getState = 2) or (selecs[ButtonSelec -1].getState = 3) THEN
-    player.setEffect(selecs[ButtonSelec -1].getEffect);
+  if (selecs[ButtonSelec -1].getState = 2) or (selecs[ButtonSelec -1].getState = 3) THEN  //wenn ein Effekt vorhanden ist (einteilung in States bei Selections)
+    player.setEffect(selecs[ButtonSelec -1].getEffect);   // wird dieser Ausgeübt
   //wenn die nächste URL leer ist dann aufhören
-  URL := selecs[ButtonSelec - 1].getURL;
+  URL := selecs[ButtonSelec - 1].getURL;                  //neue URL prüfen
   if  URL <> '' then
   Begin
    //nächste Datei einlesen
    dir := GetCurrentDir();
-   data := dir + selecs[ButtonSelec -1].getURL;
+   data := dir + selecs[ButtonSelec -1].getURL;           // neue Datei abhängig von der relativen Position wird ausgelesen
    StoryClear;
   End
   else
@@ -271,24 +260,27 @@ var i : integer;
 begin
   for i := 0 to 2 do
    Begin
-    if selecs[i] <> nil then
+    if selecs[i] <> nil then                             // Alle Selections werden 'nil' gesetzt um diese Später wieder neu gesetzt werden können
       selecs[i].free;
     selecs[i] := nil;
    End;
-   Memo1.Lines.Clear;
-   StoryAblauf();
+   Memo1.Lines.Clear;                                    //Memo wird leer gemacht
+   StoryAblauf();                                        //Neuer Beginn der Initialisierungs routine
 end;
 
 
 procedure TForm1.StoryEnd;
 var i : integer;
 begin
+
+  ShowMessage('Das Spiel ist in dieser Fassung des Spiels (v1.1) an dieser Stelle vorbei!' + #10#13 + 'Wir danken fürs spielen!' + #10#13 + 'Wir hoffen es hat euch gefallen!' + #10#13 + 'Euer Team von Ansgars Adventure :)');
   Memo1.Lines.Append('Danke fürs spielen!');
 
   //reset
   player.free;
   for i := 0 to 2 do
-    selecs[i].free;
+    if selecs[i] <> nil then
+      selecs[i].free;
 
 
 end;

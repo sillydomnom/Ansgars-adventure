@@ -45,7 +45,7 @@ end;
 
 procedure TForm2.Button4Click(Sender: TObject);
 begin
-  ShowMessage('In diesem Spiel steuerst du unseren Helden Ansgar!' + #10#13 + 'Begib dich auf eine epische Reise wo DU die Entscheidungen triffst' + #10#13 + 'Mehr dazu im Prolog' + #10#13 + #10#13 + 'Wenn du das Spiel Starten möchtest klicke im neuem Fenster auf New' + #10#13 + 'Im unterem Teil des Fenster bekommst du für jeden Teil der Geschichte' + #10#13 + 'bis zu drei Auswahlmöglichkeiten!' + #10#13 + 'Zum speichern klicke auf Save und wähle ein Speicher Profil deiner Wahl aus' + #10#13 + 'Zum laden wählst du das entsprechende Profil ebenfalls aus' + #10#13 + #10#13 + 'Es wird empfohlen das Spiel mit dem offenem Stats Fenster zu spielen' + #10#13 + 'Viel Spaß! :)');
+  ShowMessage('In diesem Spiel steuerst du unseren Helden Ansgar!' + #10#13 + 'Begib dich auf eine epische Reise wo DU die Entscheidungen triffst' + #10#13 + 'Mehr dazu im Prolog' + #10#13 + #10#13 + 'Wenn du das Spiel Starten möchtest im neuem Fenster klicke auf New' + 'Im unterem Teil des Fenster bekommst du für jeden Teil der Geschichte' + #10#13 + 'bis zu drei Auswahlmöglichkeiten!' + #10#13 + 'Zum speichern klicke auf Save und wähle ein Speicher Profil deiner Wahl aus' + #10#13 + 'Zum laden wählst du das entsprechende Profil ebenfalls aus' + #10#13 + #10#13 + 'Es wird empfohlen das Spiel mit dem offenem Stats Fenster zu spielen' + #10#13 + 'Viel Spaß! :)');
 end;
 
 end.

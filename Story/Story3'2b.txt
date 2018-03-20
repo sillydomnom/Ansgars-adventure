@@ -1,4 +1,4 @@
-28
+﻿28
 Du legst den Löffel auf den Tisch. Der Eintopf hat dir gut getan, ein warmes Gefühl herrscht nun in deiner Magenregion. 
 Der Mann ist immernoch beim Essen, währenddessen schaust du dir weiter das Bücherregal an. Es sind aber hunderte von Büchern, Große und Kleine, Dicke und Dünne, mit den unterschiedlichsten Einschlägen.
 Es vergehen Minuten, bis der Mann seine Schlüssel leer gegessen hat. Dann began er zureden.
@@ -28,4 +28,4 @@ Du befolgst die Anweisungen des Mannes und begibst dich zurück in das Zimmer, u
 Der Mann flüsterst dir hinterher, leise, aber dennoch laut genung, damit du es verstehen kannst: "Es ist gut, dass du gekommen bist Ansgar. 
 Es wartet ein großes Abenteuer auf dich, hoffentlich überlebt du dies und kannst heil nach Hause zurück. Außerdem müssen wir noch mal über deinen Angriff reden Ansgar."
 1
-0|Weiter|\Story\Story3'2c.txt
+0|Weiter|

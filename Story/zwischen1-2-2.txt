@@ -1,0 +1,5 @@
+2
+Du besitzt nun Zugnirs Klinge! Herzlichen Glückwunsch!
+Kehre nun zurück
+1
+2|Zurückkehren|\Story\zwischen1-2.txt|Gold:-30

@@ -1,0 +1,5 @@
+2
+Das war eine gute Entscheidung du hast den Gladiator niedergeschlagen und einen Preis von 10 Gold erhalten! 
+Hier nimm deine Belohnung!
+1
+2|Nehmen & Zurückkehren|\Story\zwischen1-2.txt|Gold:10

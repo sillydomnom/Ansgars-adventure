@@ -2023,35 +2023,35 @@ object Form3: TForm3
     Top = 240
     Width = 36
     Height = 20
-    Caption = 'Inv'
+    Caption = 'n/a'
     WordWrap = True
   end
   object Label5: TLabel
     Left = 32
     Top = 288
-    Width = 84
+    Width = 108
     Height = 20
-    Caption = 'Gold: 0'
+    Caption = 'Gold: n/a'
   end
   object Label6: TLabel
     Left = 32
     Top = 328
-    Width = 156
+    Width = 168
     Height = 20
-    Caption = 'Leben: 30/100'
+    Caption = 'Leben: n/a/100'
   end
   object Label7: TLabel
     Left = 32
     Top = 368
-    Width = 168
+    Width = 192
     Height = 20
-    Caption = 'R'#252'stung: 0/100'
+    Caption = 'R'#252'stung: n/a/100'
   end
   object Label8: TLabel
     Left = 32
     Top = 408
-    Width = 120
+    Width = 132
     Height = 20
-    Caption = 'St'#228'rke: 10'
+    Caption = 'St'#228'rke: n/a'
   end
 end

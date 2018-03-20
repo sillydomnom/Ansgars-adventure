@@ -1,9 +1,8 @@
-6
+4
 Du siehst dich um. Um dich herum liegen die schon beschriebenen Scherben der Glasbehaelter und die Holztruemmer der Baracke. Hinter dir erkennst du eine Anhaeufung der Truemmer, sowie schwarzer Russ auf dem Boden.
 Du erkennst dort stand mal die Huette mit dem Raum, in welchen du eingesperrt warst.
-Rechts neben der Explosionsstelle siehst du die Leichen von drei Maenner, obwohl sich die leblosen Koerper ungefaehr sieben Meter von dir weg sind, erkennst du doch diesen groben grossen Mann liegen, der mit der Knollennase. 
-Du versuchst du den Leichen zu kommen, doch du merkst, dass dein Koerper viel zu schwach ist, um sich weiter zu bewegen, deswegen findest du, dass sich auszuruhen, die intelligenteste Loesung ist. Du laesst dich langsam fallen.
-Deinen Kopf legst du auf ein Stueck Wiese, auf der keine Truemmer liegen und schlaefst ein.
-Klicke auf weiter...
-1
-0|Weiter|\Story\Story2.txt
+Rechts neben der Explosionsstelle siehst du die Leichen von drei Maenner, obwohl sich die leblosen Koerper ungefaehr sieben Meter von dir weg sind, erkennst du doch diesen groben grossen Mann liegen, der mit der Knollennase.
+Weiter hinten siehst du ein kleines Dorf. Solltest du obwohl du so müde bist dort einen kleinen Abstecher machen? 
+2
+0|Schlafen|\Story\Story1-1.txt
+2|Dorf aufsuchen|\Story\Story1-2.txt|Strength:-5

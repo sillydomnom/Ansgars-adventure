@@ -1,0 +1,7 @@
+3
+Als du reinkamst fragt dich der Schmied was du kaufen möchtest.
+Doch er entschuldigt sich gleich währenddessen dass er nur eine Klinge besäße.
+Möchtest du sie kaufen oder doch lieber zum Hauptplatz zurückkehren?
+2
+1|Kaufen|\Story\zwischen1-2-2.txt|Gold:30
+0|Zurückkehren|\Story\zwischen1-1.txt

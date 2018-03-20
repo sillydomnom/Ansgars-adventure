@@ -1,7 +1,7 @@
 unit Objects;
 
 interface
-uses Classes, SysUtils, StrUtils;
+uses Classes, SysUtils, StrUtils, Dialogs;
 type
   Tplayer = class         //Player Objekt
      private
@@ -24,7 +24,7 @@ type
       procedure setItems(setter : tstringlist);
       function checkForItem(item : String) : boolean;
       //Effect Ausübung von der ausgewälten Selection
-      procedure setEffect(effect : tstringlist);
+      function setEffect(effect : tstringlist) : boolean;
   end;
   selec = class          //Selection Object
     private
@@ -139,16 +139,14 @@ begin
 end;
 
       //Effect Ausübung von der ausgewälten Selection
-procedure Tplayer.setEffect(effect : tstringlist);
+function Tplayer.setEffect(effect : tstringlist) : boolean;
 var effects: tstringlist;
     i : integer;
-    s, s1 : String;
-  l: Integer;
 Begin
   //stringlist um eine Erweiterung um mehrere Effekte evtl. hinzuzufügen
  effects := tstringlist.Create;
  Unit1.Form1.split(':',effect[0],effects);   //gesplittet um die Variable und die Zahl zu isolieren
-
+ result := true; //Falls Spieler stirbt --> false
  //case abhängig von der Variable bei 'Gold' ist der case 0 bei 'Armor' 1 usw.
  case IndexStr(effects[0],['Gold', 'Armor', 'HP', 'Strength','Item']) of
  0:
@@ -180,6 +178,11 @@ Begin
    else
       Unit1.Form1.Memo1.Lines.Append('Du hast ' + inttostr(i) + ' Leben verloren!');
    Unit1.Form1.Memo1.Lines.Append('');
+   if self.health <= 0 then
+   Begin
+     ShowMessage('Du bist gestorben!');
+     result := false;
+   End;
  End;
  3:
  Begin

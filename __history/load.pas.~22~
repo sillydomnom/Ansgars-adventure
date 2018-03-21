@@ -81,11 +81,10 @@ begin
     Form1.setData(SaveStats1[1]);                              //URL wird in Hauptroutine auf gespeicherte URL gesetzt
     player := Tplayer.create(strtoint(SaveStats1[2]), strtoint(SaveStats1[3]), strtoint(SaveStats1[4]), strtoint(SaveStats1[5]));   // neuer Player wird erstelt
     if StrToInt(SaveStats1[6]) <> 0 then
-      for i := 0 to strtoint(SaveStats1[6]) - 1 do
+      for i := 0 to strtoint(SaveStats1[6]) do
       Begin
         items.Append(SaveStats1[7 + i]);                       // items werden dem neuem player hinzugefügt
       End;
-    player.setItems(items);
     Form1.setPlayer(player);                                   //player zur Hauptroutine hinzugefügt
     Form1.Enabled := true;
     Form1.StoryClear;

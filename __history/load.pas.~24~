@@ -85,7 +85,6 @@ begin
       Begin
         items.Append(SaveStats1[7 + i]);                       // items werden dem neuem player hinzugefügt
       End;
-    player.setItems(items);
     Form1.setPlayer(player);                                   //player zur Hauptroutine hinzugefügt
     Form1.Enabled := true;
     Form1.StoryClear;

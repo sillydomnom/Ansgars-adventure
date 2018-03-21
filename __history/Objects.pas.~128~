@@ -62,7 +62,7 @@ End;
 
 procedure Tplayer.addItem(item: string);                              //items hinzufügen
 begin
-  self.items.append(item);
+  self.items.Add(item);
 end;
 
 function Tplayer.checkForItem(item : String) : boolean;               //items testen

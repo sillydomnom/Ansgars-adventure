@@ -4,8 +4,8 @@ object Form3: TForm3
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Stats'
-  ClientHeight = 460
-  ClientWidth = 328
+  ClientHeight = 462
+  ClientWidth = 305
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -1999,17 +1999,17 @@ object Form3: TForm3
   end
   object Label1: TLabel
     Left = 192
-    Top = 32
+    Top = 72
     Width = 36
     Height = 20
     Caption = 'Du:'
   end
   object Label2: TLabel
     Left = 192
-    Top = 80
+    Top = 112
     Width = 72
     Height = 20
-    Caption = 'Michal'
+    Caption = 'Ansgar'
   end
   object Label3: TLabel
     Left = 32
@@ -2017,14 +2017,6 @@ object Form3: TForm3
     Width = 120
     Height = 20
     Caption = 'Inventory:'
-  end
-  object Label4: TLabel
-    Left = 32
-    Top = 240
-    Width = 36
-    Height = 20
-    Caption = 'n/a'
-    WordWrap = True
   end
   object Label5: TLabel
     Left = 32
@@ -2053,5 +2045,14 @@ object Form3: TForm3
     Width = 132
     Height = 20
     Caption = 'St'#228'rke: n/a'
+  end
+  object Button1: TButton
+    Left = 32
+    Top = 234
+    Width = 97
+    Height = 31
+    Caption = #214'ffnen'
+    TabOrder = 0
+    OnClick = Button1Click
   end
 end

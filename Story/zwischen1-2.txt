@@ -1,5 +1,6 @@
-1
-Bist du fertig möchtest du gehen?
+2
+Möchtest du auf dem Dorfplatz bleiben?
+Oder bist du doch schon fertig und möchtest zurückkehren?
 2
 0|Nein hier bleiben!|\Story\Story1-2.txt|Strength:-1
 0|Ja ich will zurückkehren|\Story\Story1-1.txt

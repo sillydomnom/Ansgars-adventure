@@ -101,7 +101,7 @@ begin
     StoryContinue();
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);  //Initialisierung des Inventory Menüs
+procedure TForm1.FormCreate(Sender: TObject);
 begin
   Form3.setInventory('Hier ist nichts!');
 end;

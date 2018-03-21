@@ -12,23 +12,20 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    Button1: TButton;
-    procedure Button1Click(Sender: TObject);
   private
     { Private-Deklarationen }
   public
     { Public-Deklarationen }
     procedure onUpdate(player : Tplayer);
-    procedure setInventory(setter : String);
   end;
 
 var
   Form3: TForm3;
-  Inventory: String;
 
 implementation
 
@@ -36,16 +33,6 @@ uses Unit1;
 
 {$R *.dfm}
                                                                       //Stats updaten!
-
-procedure TForm3.setInventory;
-begin
-  Inventory := setter;
-end;
-
-procedure TForm3.Button1Click(Sender: TObject);  //Inventory Menü öffnen
-begin
-  ShowMessage(Inventory);
-end;
 
 procedure TForm3.onUpdate(player: Tplayer);
 var items : tstringlist;
@@ -61,16 +48,13 @@ begin
     for i := 0 to items.Count -1 do
     Begin
       if i = 0 then
-      Begin
-        Inventory := '';
-        Inventory := items[i];
-      End
+        Label4.Caption := items[i]
       else
-        Inventory := Inventory + #10#13 + items[i];
+        Label4.Caption := Label4.Caption + ', ' + items[i];
     End;
   End
   else
-    Inventory := 'Hier ist nichts!';
+    Label4.Caption := '';
 
 end;
 

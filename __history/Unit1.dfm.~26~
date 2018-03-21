@@ -1,17 +1,17 @@
-object Form2: TForm2
+object Form1: TForm1
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu, biMinimize]
+  BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'Ansgar'#39's Adventure'
-  ClientHeight = 610
-  ClientWidth = 960
+  ClientHeight = 618
+  ClientWidth = 920
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -20
   Font.Name = 'Courier'
-  Font.Style = [fsBold, fsItalic]
+  Font.Style = []
   Icon.Data = {
     0000010001008D8000000100180028DE000016000000280000008D0000000001
     0000010018000000000000000000000000000000000000000000000000005481
@@ -1792,61 +1792,118 @@ object Form2: TForm2
     0000000000000000000000000000000000003FF8000000000000000000000000
     0000000000003FF80000000000000000000000000000000000007FF80000}
   OldCreateOrder = False
+  Position = poOwnerFormCenter
   PixelsPerInch = 96
   TextHeight = 20
-  object Label1: TLabel
-    Left = 104
-    Top = 184
-    Width = 739
-    Height = 65
-    Caption = 'Ansgar'#39's Adventure'
+  object Memo1: TMemo
+    Left = 16
+    Top = 8
+    Width = 777
+    Height = 473
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -67
+    Font.Height = -20
     Font.Name = 'Courier'
-    Font.Style = [fsBold]
+    Font.Style = []
     ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
   end
   object Button1: TButton
-    Left = 40
-    Top = 472
-    Width = 225
-    Height = 73
-    Caption = 'Start Game'
-    TabOrder = 0
-    OnClick = Button1Click
-  end
-  object Button3: TButton
-    Left = 664
-    Top = 472
-    Width = 225
-    Height = 73
-    Caption = 'Impressum'
-    TabOrder = 1
-    OnClick = Button3Click
-  end
-  object Button4: TButton
-    Left = 360
-    Top = 472
-    Width = 225
-    Height = 73
-    Caption = 'Help'
-    TabOrder = 2
-    OnClick = Button4Click
-  end
-  object Button2: TButton
-    Left = 824
-    Top = 8
-    Width = 128
-    Height = 41
-    Caption = 'New Versions'
+    Left = 16
+    Top = 504
+    Width = 193
+    Height = 81
+    Caption = 'Mgl1'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -13
+    Font.Name = 'Courier'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+    WordWrap = True
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 312
+    Top = 504
+    Width = 193
+    Height = 81
+    Caption = 'Mgl2'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Courier'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+    WordWrap = True
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 600
+    Top = 503
+    Width = 193
+    Height = 82
+    Caption = 'Mgl3'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
     Font.Name = 'Courier'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
-    OnClick = Button2Click
+    Visible = False
+    WordWrap = True
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 799
+    Top = 416
+    Width = 103
+    Height = 65
+    Caption = 'Stats'
+    TabOrder = 4
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 799
+    Top = 8
+    Width = 103
+    Height = 65
+    Caption = 'Menu'
+    TabOrder = 5
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 799
+    Top = 79
+    Width = 103
+    Height = 66
+    Caption = 'Save'
+    TabOrder = 6
+    OnClick = Button6Click
+  end
+  object Button7: TButton
+    Left = 799
+    Top = 151
+    Width = 103
+    Height = 66
+    Caption = 'Load'
+    TabOrder = 7
+    OnClick = Button7Click
+  end
+  object Button8: TButton
+    Left = 799
+    Top = 223
+    Width = 103
+    Height = 66
+    Caption = 'New'
+    TabOrder = 8
+    OnClick = Button8Click
   end
 end

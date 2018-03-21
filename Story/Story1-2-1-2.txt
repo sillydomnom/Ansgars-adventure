@@ -1,6 +1,6 @@
 3
-Das einziges Verlust Geschäft du hast 5 Gold verloren!
+Das ist ein einziges Verlust Geschäft du hast 5 Gold verloren!
 
 Das muss doch gefältscht sein!
 1
-0|Zurückkehren|\Story\Story1-2-1.txt 
+2|Zurückkehren|\Story\Story1-2-1.txt|Gold:-5 

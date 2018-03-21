@@ -23,7 +23,6 @@ type
   public
     { Public-Deklarationen }
     procedure onUpdate(player : Tplayer);
-    procedure setInventory(setter : String);
   end;
 
 var
@@ -37,12 +36,7 @@ uses Unit1;
 {$R *.dfm}
                                                                       //Stats updaten!
 
-procedure TForm3.setInventory;
-begin
-  Inventory := setter;
-end;
-
-procedure TForm3.Button1Click(Sender: TObject);  //Inventory Menü öffnen
+procedure TForm3.Button1Click(Sender: TObject);
 begin
   ShowMessage(Inventory);
 end;
@@ -61,16 +55,13 @@ begin
     for i := 0 to items.Count -1 do
     Begin
       if i = 0 then
-      Begin
-        Inventory := '';
-        Inventory := items[i];
-      End
+        Inventory := items[i]
       else
         Inventory := Inventory + #10#13 + items[i];
     End;
   End
   else
-    Inventory := 'Hier ist nichts!';
+    Inventory := '';
 
 end;
 

@@ -42,7 +42,7 @@ begin
   Inventory := setter;
 end;
 
-procedure TForm3.Button1Click(Sender: TObject);  //Inventory Menü öffnen
+procedure TForm3.Button1Click(Sender: TObject);
 begin
   ShowMessage(Inventory);
 end;
